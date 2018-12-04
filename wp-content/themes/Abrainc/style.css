@@ -1,0 +1,15 @@
+@charset "utf8";
+/*
+Theme Name: Abrainc
+Theme URI: https://abrainc.org.br/
+Author: Abrainc
+Author URI: https://abrainc.org.br/
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: abrainc
+*/
+
+@import url('style/base.css')

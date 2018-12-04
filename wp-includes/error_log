@@ -1,0 +1,18 @@
+array(0) {
+}
+array(0) {
+}
+array(5) {
+  ["wordpress_test_cookie"]=>
+  string(15) "WP Cookie check"
+  ["path"]=>
+  string(1) "/"
+  ["wordpress_8af2252da12026cde512205867feeadc"]=>
+  string(125) "alice|1447310403|yxK73cVXAqLsiIIgdcR5gqgLmTCdsEOfEtMkOflMx82|dd1e11ae3c17e3d6aaff953f8d72abae00abeb2eeb0c63ccbc5c9b730195af03"
+  ["httponly"]=>
+  string(0) ""
+  ["wordpress_logged_in_8af2252da12026cde512205867feeadc"]=>
+  string(125) "alice|1447310403|yxK73cVXAqLsiIIgdcR5gqgLmTCdsEOfEtMkOflMx82|e80491e6844d631b6c42f104234945060f98cfd794517f464a52bbee76de4db2"
+}
+array(0) {
+}
