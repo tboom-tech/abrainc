@@ -98,6 +98,10 @@
 
 						<div class="content-post preview-content">
 							<?php the_content(); ?>
+
+							<a class="link-indicador bt-more" target="_blank" href="<?php the_field('link_indicador'); ?>">
+								Veja AQUI
+							</a>							
 						</div>
 
 						<div class="share">

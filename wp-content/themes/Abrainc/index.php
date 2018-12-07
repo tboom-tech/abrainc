@@ -145,12 +145,12 @@ get_header(); ?>
 				    </div>  	
 			      	<?php endwhile; wp_reset_postdata(); ?>			
 
-				<div class="col-md-3 banner_medium">
+				<div class="col-md-3 banner_medium carousel-banner">
 			      	<?php
 			          	$loop = new WP_Query(array('post_type' => 'banners',
 			                      'orderby' => 'post_date',
 			                      'order' => 'DESC',
-			                      'posts_per_page' => 1,
+			                      'posts_per_page' => 3,
 			                      'meta_query'=> array(
 			                        array(
 			                          'key' => 'categoria',
@@ -161,7 +161,7 @@ get_header(); ?>
 			                    ));
 			              	while ($loop->have_posts()) : $loop->the_post();
 			      		?>
-					      	<a href="<?php the_field('link'); ?>">
+					      	<a href="<?php the_field('link'); ?>" class="carousel-ban">
 					      		<img src="<?php the_field('imagem'); ?>">
 					      	</a>
 			      	<?php endwhile; wp_reset_postdata(); ?>					
@@ -273,7 +273,13 @@ get_header(); ?>
 			              	while ($loop->have_posts()) : $loop->the_post();
 			      	?>
 
-			      	<a href="<?php the_permalink(); ?>">
+			      		<?php if (get_field('link_youtube')) { ?>
+			      			<a class="link_video" onClick="Video('<?php the_field('link_youtube'); ?>');">
+			      		<?php }else if(get_field('link_outros')){ ?>
+			      			<a href="<?php the_field('link_outros'); ?>" target="_blank">
+			      		<?php }else{ ?>
+							<a href="<?php the_permalink(); ?>">
+			      		<?php } ?>
 				      	<div class="post-video" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 				      		<div class="player"></div>
 				      		<h5><?php the_title(); ?></h5>
@@ -306,25 +312,10 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<section id="apoiadores" class="desktop">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 box-images">
-					<h4>apoiadoras</h4>
-					<?php 
-						$loop = new WP_Query(array('post_type' => 'apoiadores',
-			                      'orderby' => 'post_date',
-			                      'order' => 'ASC',
-			                      'posts_per_page' => 6
-			                    ));
-			              	while ($loop->have_posts()) : $loop->the_post();
-					?>
-						<img src="<?php the_field('imagem'); ?>">
-					<?php endwhile; wp_reset_postdata(); ?>
-				</div>
-			</div>
-		</div>
-	</section>
+	<div class="modal" id="modal-video">
+		<button class="close close-video">x</button>
+		<iframe width="800" height="450" id="frame-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>	
 
 <?php get_footer(); ?>
 
@@ -332,6 +323,19 @@ get_header(); ?>
 <link rel="stylesheet" href="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/styles/flickity.min.css">
 
 <script type="text/javascript">
+    var $carousel_ban = $('.carousel-banner').flickity({
+        cellSelector: '.carousel-ban',
+        percentPosition: true,
+        wrapAround: true,
+        pauseAutoPlayOnHover: false,
+        autoPlay: 6000,
+        pageDots: false,
+        imagesLoaded: true,
+        initialIndex: 1,
+        contain: true,
+        cellAlign: 'center'
+    });	   
+    	
     var $carousel = $('.carousel').flickity({
         cellSelector: '.carousel-cell',
         percentPosition: true,
@@ -343,5 +347,5 @@ get_header(); ?>
         initialIndex: 0,
         contain: true,
         cellAlign: 'center'
-    });	
+    });	 
 </script>

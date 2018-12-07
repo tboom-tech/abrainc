@@ -37,7 +37,14 @@ get_template_part('common');
 
 				      	<?php if ($count == 0) { ?>
 					      	<div class="col-md-12 video-destaque">
-						      	<a href="<?php the_permalink(); ?>">
+					      		<?php if (get_field('link_youtube')) { ?>
+					      			<a class="link_video" onClick="Video('<?php the_field('link_youtube'); ?>');">
+					      		<?php }else if(get_field('link_outros')){ ?>
+					      			<a href="<?php the_field('link_outros'); ?>" target="_blank">
+					      		<?php }else{ ?>
+									<a href="<?php the_permalink(); ?>">
+					      		<?php } ?>
+						      	
 							      	<div class="post-video col-md-8" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 							      		<div class="player"></div>
 							      	</div>
@@ -63,7 +70,13 @@ get_template_part('common');
 					      	</div>
 				      	<?php }else{ ?>
 					      	<div class="col-md-3 video-unique">
-						      	<a href="<?php the_permalink(); ?>">
+					      		<?php if (get_field('link_youtube')) { ?>
+					      			<a class="link_video" onClick="Video('<?php the_field('link_youtube'); ?>');">
+					      		<?php }else if(get_field('link_outros')){ ?>
+					      			<a href="<?php the_field('link_outros'); ?>" target="_blank">
+					      		<?php }else{ ?>
+									<a href="<?php the_permalink(); ?>">
+					      		<?php } ?>
 							      	<div class="post-video" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 							      		<div class="player"></div>
 							      	</div>
@@ -78,6 +91,10 @@ get_template_part('common');
 			</div>
 		</div>
 	</section>
-<?php
 
-get_footer();
+	<div class="modal" id="modal-video">
+		<button class="close close-video">x</button>
+		<iframe width="800" height="450" id="frame-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+<?php get_footer(); ?>

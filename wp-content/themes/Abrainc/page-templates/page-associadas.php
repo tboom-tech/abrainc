@@ -36,27 +36,32 @@ get_template_part('common');
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-md-12">
-					<h2>
-						Parceiras
-						<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page.png">
-					</h2>
 
-					<?php 
-						$loop = new WP_Query(array('post_type' => 'parceiros',
-			                      'orderby' => 'title',
-			                      'order' => 'ASC',
-			                      'posts_per_page' => 50
-			                    ));
-			              	while ($loop->have_posts()) : $loop->the_post();
-					?>
-						<div class="col-md-2 col-xs-6 item associada">
-							<img src="<?php the_field('imagem_pagina'); ?>">
+			<?php 
+				$loop = new WP_Query(array('post_type' => 'parceiros',
+                      'orderby' => 'title',
+                      'order' => 'ASC',
+                      'posts_per_page' => 50
+                    ));
+				if ($loop->have_posts()) { ?>
+
+					<div class="row">
+						<div class="col-md-12">
+							<h2>
+								Parceiras
+								<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page.png">
+							</h2>
+
+							<?php 
+				              	while ($loop->have_posts()) : $loop->the_post();
+							?>
+									<div class="col-md-2 col-xs-6 item associada">
+										<img src="<?php the_field('imagem_pagina'); ?>">
+									</div>
+							<?php endwhile; wp_reset_postdata(); ?>					
 						</div>
-					<?php endwhile; wp_reset_postdata(); ?>					
-				</div>
-			</div>			
+					</div>			
+				<?php } ?>
 
 			<div class="row">
 				<div class="col-md-12">
