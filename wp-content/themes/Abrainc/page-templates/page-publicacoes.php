@@ -31,7 +31,10 @@ get_template_part('common');
 					</a>
 					<a href="/noticias/listagem-podcasts/">
 						Rádio Abrainc
-					</a>															
+					</a>
+					<a href="/estudos/">
+						Guias e estudos
+					</a>																				
 				</div>	
 			</div>
 		</div>
@@ -157,7 +160,14 @@ get_template_part('common');
 				      		<?php }else{ ?>
 								<a href="<?php the_permalink(); ?>">
 				      		<?php } ?>
-						      	<div class="post-video" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+
+			      			<?php if (!get_the_post_thumbnail() && get_field('link_youtube')){ 
+			      				$imagem_destaque = 'https://img.youtube.com/vi/'.get_field('link_youtube').'/maxresdefault.jpg';
+			      			}else{
+			      				$imagem_destaque = get_the_post_thumbnail_url();
+			      			} ?>
+
+						      	<div class="post-video" style="background-image: url('<?php echo $imagem_destaque; ?>');">
 						      		<div class="player"></div>
 						      	</div>
 						      	<h5><?php the_title(); ?></h5>
@@ -197,6 +207,45 @@ get_template_part('common');
 
 				      	<?php endwhile; wp_reset_postdata(); ?>
 					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+
+	<section id="estudos" class="estudos-publicacoes">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 title">
+					<h4>Guias e estudos</h4>
+					<a class="float-right link-more-pub" href="/estudos/">Mais guias e estudos  »</a>
+					<div class="row">
+			      	<?php
+			          	$loop = new WP_Query(array('post_type' => 'post',
+			                      'orderby' => 'post_date',
+			                      'order' => 'DESC',
+			                      'posts_per_page' => 4,
+								  'tax_query' => array(
+							        array(
+							            'taxonomy' => 'category',
+							            'field' => 'slug',
+							            'terms' => 'estudos'
+							        )
+							       )
+			                    ));
+			              	while ($loop->have_posts()) : $loop->the_post();
+			      	?>
+						<div class="post-estudo col-md-3">
+							<div class="content-post-estudo">
+						    	<a href="<?php the_permalink(); ?>">
+									<p class="title_event"><?php the_title(); ?></p>
+									<div class="description_event">
+										<?php the_excerpt(); ?>
+									</div>
+						      	</a>
+					      	</div>
+				      	</div>	
+			      	<?php endwhile; wp_reset_postdata(); ?>		
+			      	</div>			
 				</div>
 			</div>
 		</div>

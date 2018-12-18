@@ -48,7 +48,7 @@ get_template_part('common');
 							            'field' => 'slug',
 							            'terms' => 'estudos'
 							        )
-							       )					              					              
+							       )					              
 					            ));
 					      	while ($noticias->have_posts()) : $noticias->the_post();
 					?>

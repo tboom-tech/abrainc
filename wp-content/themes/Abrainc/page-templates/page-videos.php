@@ -44,8 +44,14 @@ get_template_part('common');
 					      		<?php }else{ ?>
 									<a href="<?php the_permalink(); ?>">
 					      		<?php } ?>
+
+				      			<?php if (!get_the_post_thumbnail() && get_field('link_youtube')){ 
+				      				$imagem_destaque = 'https://img.youtube.com/vi/'.get_field('link_youtube').'/maxresdefault.jpg';
+				      			}else{
+				      				$imagem_destaque = get_the_post_thumbnail_url();
+				      			} ?>					      		
 						      	
-							      	<div class="post-video col-md-8" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+							      	<div class="post-video col-md-8" style="background-image: url('<?php echo $imagem_destaque; ?>');">
 							      		<div class="player"></div>
 							      	</div>
 
@@ -77,7 +83,14 @@ get_template_part('common');
 					      		<?php }else{ ?>
 									<a href="<?php the_permalink(); ?>">
 					      		<?php } ?>
-							      	<div class="post-video" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+
+				      			<?php if (!get_the_post_thumbnail() && get_field('link_youtube')){ 
+				      				$imagem_destaque = 'https://img.youtube.com/vi/'.get_field('link_youtube').'/maxresdefault.jpg';
+				      			}else{
+				      				$imagem_destaque = get_the_post_thumbnail_url();
+				      			} ?>	
+				      								      		
+							      	<div class="post-video" style="background-image: url('<?php echo $imagem_destaque; ?>');">
 							      		<div class="player"></div>
 							      	</div>
 							      	<h5><?php the_title(); ?></h5>

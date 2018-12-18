@@ -361,6 +361,8 @@ footer .tboom{
 #posts-destaques .post-destaque h2{
 	font-family:"Mermaid Bold";
 	margin-top: 175px;
+	z-index: 1;
+    position: relative;	
 }
 
 #posts-destaques .post-destaque .categorie{
@@ -368,6 +370,8 @@ footer .tboom{
 	font-weight: bold;
 	font-size: 12px;
 	text-decoration: underline;
+	z-index: 1;
+    position: relative;	
 }
 
 #posts-destaques a .post-destaque{
@@ -376,6 +380,11 @@ footer .tboom{
 
 #posts-destaques a:hover{
 	text-decoration: none;
+}
+
+#posts-destaques p{
+	z-index: 1;
+    position: relative;		
 }
 
 #posts-destaques .post-secundario{
@@ -410,6 +419,16 @@ footer .tboom{
 	display: inline-block;
 	width: 120px;
 	height: 80px;
+	background-size: cover;
+}
+
+.overlay-home{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    width: 89.9%;
+    height: 100%;
+    left: 15px;
+    top: 0;
 }
 
 #posts-destaques .post-secundario.segundo-destaque .img-destaque{
@@ -1118,12 +1137,14 @@ span.wpcf7-not-valid-tip{
 	margin-top: 30px;
 }
 
+.estudos-publicacoes .title,
 .galeria-publicacoes .title,
 .podcast-publicacoes .title {
     border-top: 1px solid #ebebeb;
     margin-top: 60px;    
 }
 
+.estudos-publicacoes .title h4,
 .galeria-publicacoes .title h4,
 .podcast-publicacoes .title h4{
 	color: #383b3e;
@@ -1142,6 +1163,58 @@ span.wpcf7-not-valid-tip{
 	height: 162px;	
 	background-size: cover;
 	background-position: center;
+}
+
+.estudos-publicacoes p.title_event {
+    height: 70px;
+    overflow: hidden;
+	color: #373b3e;
+    font-family: 'Mermaid-Bold';
+    font-size: 18px;
+    font-weight: bold;    
+}
+
+.estudos-publicacoes .content-post-estudo {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 35px;
+    height: 280px;
+}
+
+.estudos-publicacoes .post-estudo {
+    margin-bottom: 20px;
+}
+
+.estudos-publicacoes .content-post-estudo .description_event {
+    height: 100px;
+    overflow: hidden;
+    margin-top: 55px;
+    font-size: 14px;
+    color: #373b3e;
+}
+
+.estudos-publicacoes .content-post-estudo p.title_event:before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    background: #246ecb;
+    left: 43%;
+    margin-top: 100px;
+}
+
+.estudos-publicacoes .content-post-estudo:hover {
+    background: #246ecb;
+}
+
+.estudos-publicacoes .content-post-estudo:hover p.title_event,
+.estudos-publicacoes .content-post-estudo:hover .description_event {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.estudos-publicacoes .content-post-estudo:hover p.title_event:before {
+	background: #FFF;
 }
 
 .podcast-publicacoes .post-podcast{

@@ -61,6 +61,7 @@ get_header(); ?>
 					      		</span>
 					      		<h2><?php the_title(); ?></h2>
 					      		<p><?php the_excerpt(); ?></p>
+					      		<div class="overlay-home"></div>
 					      	</div>
 				      	</a>
 			      	<?php endwhile; wp_reset_postdata(); ?>					
@@ -280,7 +281,14 @@ get_header(); ?>
 			      		<?php }else{ ?>
 							<a href="<?php the_permalink(); ?>">
 			      		<?php } ?>
-				      	<div class="post-video" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+
+		      			<?php if (!get_the_post_thumbnail() && get_field('link_youtube')){ 
+		      				$imagem_destaque = 'https://img.youtube.com/vi/'.get_field('link_youtube').'/maxresdefault.jpg';
+		      			}else{
+		      				$imagem_destaque = get_the_post_thumbnail_url();
+		      			} ?>
+			      		
+				      	<div class="post-video" style="background-image: url('<?php echo $imagem_destaque; ?>');">
 				      		<div class="player"></div>
 				      		<h5><?php the_title(); ?></h5>
 				      		<div class="overlay"></div>
