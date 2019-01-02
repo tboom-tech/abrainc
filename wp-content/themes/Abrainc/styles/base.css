@@ -423,7 +423,7 @@ footer .tboom{
 }
 
 .overlay-home{
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.6);
     position: absolute;
     width: 89.9%;
     height: 100%;
@@ -956,7 +956,7 @@ span.wpcf7-not-valid-tip{
 	width: 472px;
     height: 358px;
     position: absolute;
-    background: #00000052;
+    background-color: rgba(0,0,0,0.6);
     top: 65px;
     left: 0;	
 }
