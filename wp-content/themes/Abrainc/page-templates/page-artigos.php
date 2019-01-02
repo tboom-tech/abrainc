@@ -61,6 +61,7 @@ get_template_part('common');
   					$title = get_the_title();
   					$excerpt = get_the_excerpt();
 					$post_object = get_field('autor');
+
 					if($post_object){
 						$post = $post_object;
 						setup_postdata($post); 
@@ -77,8 +78,12 @@ get_template_part('common');
 		      		<p><?php echo $excerpt; ?></p>			
 	      		</div>      	
 	      	</a>
-      	</div>			
-<?php endwhile; ?>
+      	</div>
+      	<?php 
+			$name_autor='';
+			$foto_autor='';
+      	?>			
+	<?php endwhile; ?>
 		 </div>
 		 		<div class="col-md-1"></div>
 				<div class="col-md-3 sidebar desktop">
