@@ -309,7 +309,9 @@ get_header(); ?>
 		   							$repeater = get_field('imagens');
 		   							foreach($repeater as $i => $row) { 
 		   						?>
-		   							<img src="<?php echo $row['imagem']; ?>">
+		   							<div class="img-galeria" style="background-image: url(<?php echo $row['imagem']; ?>);">
+		   								
+		   							</div>
 		   						<?php } ?>	
 	   						</a>
    						</div>

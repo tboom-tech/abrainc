@@ -751,6 +751,16 @@ footer .tboom{
     text-transform: uppercase;
 }
 
+#midias .content-galeria div.img-galeria{
+    width: 200px;
+    height: 175px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 2px;
+}
+
 .noticias{
 	margin-top: 50px;
 }
