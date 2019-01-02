@@ -45,11 +45,13 @@ get_template_part('common');
 			      		<div class="post-galeria col-md-3">
 			      			<a href="<?php the_permalink(); ?>">								
 					    		<?php 
-					    		if (get_field('imagem')) {
-					    			$bg = get_field('imagem');
-					    		}else{
-					    			$bg = '/wp-content/themes/Abrainc/img/no-image-box.png';
-					    		}
+						    		if (get_field('imagem')) {
+						    			$bg = get_field('imagem');
+						    		}else if (get_the_post_thumbnail_url()) {
+						    			$bg = get_the_post_thumbnail_url();
+						    		} else{
+						    			$bg = '/wp-content/themes/Abrainc/img/no-image-box.png';
+						    		}
 					    		?>
 								<div class="bg-post" style="background-image: url('<?php echo $bg; ?>');"></div>
 								<div class="content-post">

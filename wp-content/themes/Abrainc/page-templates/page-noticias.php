@@ -63,23 +63,35 @@ get_template_part('common');
 
 		<?php if ($count == 0) { ?>
 		  	<a href="<?php the_permalink(); ?>">
-		      	<div class="post-destaque" style="background-image: url(<?php the_field('imagem'); ?>)">
+	    		<?php 
+		    		if (get_field('imagem')) {
+		    			$imagem = get_field('imagem');
+		    		}else if (get_the_post_thumbnail_url()) {
+		    			$imagem = get_the_post_thumbnail_url();
+		    		} else{
+		    			$imagem = '/wp-content/themes/Abrainc/img/no-image-box.png';
+		    		}
+	    		?>
+		      	<div class="post-destaque" style="background-image: url(<?php echo $imagem; ?>)">
 		      		<span class="categorie">
 						<?php echo $categorias[0]->name; ?>
 		      		</span>
 		      		<h2><?php the_title(); ?></h2>
 		      		<p><?php the_excerpt(); ?></p>
+		      		<div class="overlay-home"></div>
 		      	</div>
 		  	</a>
 		<?php }else{ ?>
 			<div class="post-list-destaque">
 		    	<a href="<?php the_permalink(); ?>">
 		    		<?php 
-		    		if (get_field('imagem')) {
-		    			$bg = get_field('imagem');
-		    		}else{
-		    			$bg = '/wp-content/themes/Abrainc/img/no-image-box.png';
-		    		}
+			    		if (get_field('imagem')) {
+			    			$bg = get_field('imagem');
+			    		}else if (get_the_post_thumbnail_url()) {
+			    			$bg = get_the_post_thumbnail_url();
+			    		} else{
+			    			$bg = '/wp-content/themes/Abrainc/img/no-image-box.png';
+			    		}
 		    		?>
 					<div class="bg-post" style="background-image: url('<?php echo $bg; ?>');"></div>
 					<div class="content-post">

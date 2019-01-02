@@ -431,6 +431,10 @@ footer .tboom{
     top: 0;
 }
 
+.noticias .overlay-home{
+	height: 445px;
+}
+
 #posts-destaques .post-secundario.segundo-destaque .img-destaque{
 	width: 100%;
 	height: 150px;
@@ -775,6 +779,13 @@ footer .tboom{
 .noticias .post-destaque h2{
 	font-family:"Mermaid Bold";
 	margin-top: 175px;
+    z-index: 1;
+    position: relative;	
+}
+
+.noticias .post-destaque p{
+    z-index: 1;
+    position: relative;	
 }
 
 .noticias .post-destaque .categorie{
@@ -782,6 +793,8 @@ footer .tboom{
 	font-weight: bold;
 	font-size: 12px;
 	text-decoration: underline;
+    z-index: 1;
+    position: relative;	
 }
 
 .noticias a .post-destaque{
@@ -1748,7 +1761,7 @@ span.wpcf7-not-valid-tip{
 
 .midia-lista .post-midia{
 	height: 375px;
-	background-size: contain;	
+	background-size: cover;	
 }
 
 .imprensa-interna h1{
