@@ -783,6 +783,14 @@ footer .tboom{
     position: relative;	
 }
 
+.noticias .listagem-noticias .post-destaque h2{
+	margin-top: 0px;
+}
+
+.noticias .listagem-noticias .post-destaque .data_noticia{
+	margin-top: 175px;
+}
+
 .noticias .post-destaque p{
     z-index: 1;
     position: relative;	
@@ -835,8 +843,16 @@ footer .tboom{
     color: #383b3e;
     font-family: "Mermaid Bold";
     font-size: 21px;
-    height: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+}
+
+.noticias .post-list-destaque .resumo_noticia{
+	height: 45px;
+    overflow: hidden;
+}
+
+.noticias .post-list-destaque p.data_noticia{
+    margin-top: -15px;
 }
 
 .noticias .post-list-destaque p{
@@ -1885,7 +1901,14 @@ span.wpcf7-not-valid-tip{
     font-size: 50px;
     font-family: 'Mermaid-Bold';
     font-weight: bold;
-    margin-bottom: 30px;	
+    margin-bottom: 40px;	
+    line-height: 30px;    
+}
+
+.eventos .content-post-indicador p.dia span{
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;	
 }
 
 .eventos .content-post-indicador p.dia:after {
@@ -1958,7 +1981,14 @@ span.wpcf7-not-valid-tip{
 
 .galeria .post-galeria .content-post-galeria p.dia{
     font-size: 72px;
-    margin-bottom: 60px;	
+    margin-bottom: 50px;
+	line-height: 35px;    	
+}
+
+.galeria .post-galeria .content-post-galeria p.dia span{
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;	
 }
 
 .eventos .content-post-indicador:hover p.dia:after {

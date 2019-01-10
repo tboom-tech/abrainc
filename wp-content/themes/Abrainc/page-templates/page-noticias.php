@@ -76,6 +76,7 @@ get_template_part('common');
 		      		<span class="categorie">
 						<?php echo $categorias[0]->name; ?>
 		      		</span>
+		      		<p class="data_noticia"><?php the_date(); ?></p>
 		      		<h2><?php the_title(); ?></h2>
 		      		<p><?php the_excerpt(); ?></p>
 		      		<div class="overlay-home"></div>
@@ -98,8 +99,11 @@ get_template_part('common');
 						<span class="categorie">
 							<?php echo $categorias[0]->name; ?>
 			      		</span>
+			      		<p class="data_noticia"><?php the_date(); ?></p>
 			      		<h4><?php the_title(); ?></h4>
-			      		<p><?php the_excerpt(); ?></p>
+			      		<div class="resumo_noticia">
+			      			<p><?php the_excerpt(); ?></p>
+			      		</div>
 			      		<p class="tags"><?php the_tags( '', ', ', '' ); ?></p>					
 		      		</div>      	
 		      	</a>

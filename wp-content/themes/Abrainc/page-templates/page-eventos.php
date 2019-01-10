@@ -99,7 +99,8 @@ $DiasMes = array('01' => '31',
 			}else{
 				$ano = date('Y');
 				$mes = date('m');
-				$data_inicio = $ano.$mes.'01';
+				// $data_inicio = $ano.$mes.'01';
+				$data_inicio = '20000101';
 				$data_fim = $ano.$mes.$DiasMes[$mes];
 			}
 
@@ -128,7 +129,7 @@ $DiasMes = array('01' => '31',
 			$link_fwd = '/eventos/?mes='.$mes_proximo.'&ano='.$ano_fwd;
 		?>
 
-		<div class="container select-data">
+		<!-- <div class="container select-data">
 			<div class="row">
 				<div class="col-md-12">
 					<p class="ano_selected"><?php echo $ano; ?></p>
@@ -152,7 +153,7 @@ $DiasMes = array('01' => '31',
 					</a>
 				</div>				
 			</div>
-		</div>		
+		</div>		 -->
 
 		<div class="container">
 			<div class="row listagem-noticias">
@@ -163,7 +164,7 @@ $DiasMes = array('01' => '31',
 						$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
 					  	$noticias = new WP_Query(array('post_type' => 'evento',
-								  'order'     => 'ASC',
+								  'order'     => 'DESC',
 								  'meta_key' => 'data_evento',
 								  'orderby'   => 'meta_value',
 					              'posts_per_page' => 16,
@@ -184,7 +185,10 @@ $DiasMes = array('01' => '31',
 					<div class="post-indicador col-md-3">
 						<div class="content-post-indicador">
 					    	<a href="<?php the_permalink(); ?>">
-								<p class="dia"><?php echo $title[0]; ?></p>
+								<p class="dia">
+									<?php echo $title[0]; ?>
+									<span><?php echo $NameMes[$title[1]]; ?> de <?php echo $title[2]; ?></span>
+								</p>
 								<p class="title_event"><?php the_title(); ?></p>
 								<p class="description_event"><?php the_field('descricao_evento'); ?></p>
 					      	</a>
