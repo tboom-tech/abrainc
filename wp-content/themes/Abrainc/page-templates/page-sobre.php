@@ -53,7 +53,7 @@ get_template_part('common');
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
-					<h4>Conquistas</h4>
+					<h4>Principais Atividades</h4>
 				</div>
 			</div>
 

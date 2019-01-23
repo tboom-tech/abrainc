@@ -173,7 +173,7 @@ ul.menu > li[class~="menu-item"] {
 ul.menu > li[class~="menu-item"].menu-item-has-children {
 	background: url(../img/down.png) right center no-repeat;
     padding-right: 15px;
-    margin-right: 45px;
+    margin-right: 35px;
 }
 
 ul.menu > li[class~="menu-item"]:last-child {
@@ -1042,7 +1042,7 @@ span.wpcf7-not-valid-tip{
 }
 
 .type_post .content-post{
-	color: #9b9b9b;
+	color: #716e6e;
 	font-size: 16px;
 	text-align: justify;
 }
@@ -1581,7 +1581,7 @@ span.wpcf7-not-valid-tip{
 .indicadores .content-post-indicador{
 	background: #f8f8f8;
 	text-align: center;
-	padding: 35px;
+	padding: 80px 35px;
 	height: 280px;	
 }
 
@@ -1624,6 +1624,7 @@ span.wpcf7-not-valid-tip{
 .indicadores .content-post-indicador .resumo{
 	max-height: 80px;
     overflow: hidden;	
+    display: none;
 }
 
 .indicadores .content-post-indicador .resumo p{
@@ -1940,8 +1941,8 @@ span.wpcf7-not-valid-tip{
 }
 
 .estudos .content-post-indicador p.title_event{
-	height: 70px;
-    overflow: hidden;	
+	height: 100px;
+    /*overflow: hidden;*/	
 }
 
 .estudos .content-post-indicador p.title_event:before{
@@ -1951,7 +1952,7 @@ span.wpcf7-not-valid-tip{
     position: absolute;
     background: #246ecb;
     left: 43%;
-    margin-top: 100px;
+    margin-top: 200px;
 }	
 
 .estudos .content-post-indicador:hover p.title_event:before{
@@ -1964,6 +1965,7 @@ span.wpcf7-not-valid-tip{
     margin-top: 55px;
     font-size: 14px;
     color: #373b3e;
+    display: none;
 }
 
 .estudos .content-post-indicador:hover .description_event{
@@ -1973,6 +1975,17 @@ span.wpcf7-not-valid-tip{
 .galeria .post-galeria .content-post-galeria p.dia,
 .galeria .post-galeria .content-post-galeria p.title_event{
 	color: #FFF;
+	position: relative;
+	z-index: 9999;
+}
+.sombra {
+	width: 262px;
+	height: 280px;
+	background-color: rgba(0,0,0,0.5);
+	position: relative;
+	z-index: 99;
+	margin-left: -35px;
+    top: -253px;
 }
 
 .galeria .post-galeria .content-post-galeria a:hover{

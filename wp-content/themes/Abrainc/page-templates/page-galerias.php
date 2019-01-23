@@ -189,6 +189,9 @@ $DiasMes = array('01' => '31',
 									<span><?php echo $NameMes[$title[1]]; ?> de <?php echo $title[2]; ?></span>
 								</p>
 								<p class="title_event"><?php the_title(); ?></p>
+								<div class="sombra">
+									
+								</div>
 					      	</a>
 				      	</div>
 			      	</div>	
