@@ -23,9 +23,6 @@ get_template_part('common');
 					<a href="/noticias/artigos/">
 						Artigos
 					</a>
-					<a href="/galeria/">
-						Galeria
-					</a>
 					<a href="/noticias/listagem-videos/">
 						Vídeos
 					</a>
@@ -92,7 +89,7 @@ get_template_part('common');
 		</div>
 	</section>	
 
-	<section id="galeria" class="galeria-publicacoes">
+	<!-- <section id="galeria" class="galeria-publicacoes">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
@@ -134,7 +131,7 @@ get_template_part('common');
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="midias" class="video-publicacoes">
 		<div class="container">

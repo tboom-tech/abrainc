@@ -164,7 +164,7 @@ $DiasMes = array('01' => '31',
 						$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
 					  	$noticias = new WP_Query(array('post_type' => 'evento',
-								  'order'     => 'DESC',
+								  'order'     => 'ASC',
 								  'meta_key' => 'data_evento',
 								  'orderby'   => 'meta_value',
 					              'posts_per_page' => 16,
