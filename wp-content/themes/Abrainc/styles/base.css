@@ -1585,6 +1585,13 @@ span.wpcf7-not-valid-tip{
 	height: 280px;	
 }
 
+.page-template-page-galerias .indicadores .content-post-indicador{
+	background: #f8f8f8;
+	text-align: center;
+	padding: 80px 35px;
+	height: 280px;	
+}
+
 .post-indicador{
 	margin-bottom: 20px;
 }
@@ -1982,10 +1989,10 @@ span.wpcf7-not-valid-tip{
 	width: 262px;
 	height: 280px;
 	background-color: rgba(0,0,0,0.5);
-	position: relative;
+	position: absolute;
 	z-index: 99;
 	margin-left: -35px;
-    top: -253px;
+	top: 0px;
 }
 
 .galeria .post-galeria .content-post-galeria a:hover{
@@ -2011,6 +2018,7 @@ span.wpcf7-not-valid-tip{
 .galeria .post-galeria .content-post-galeria p.dia:after {
 	background: #FFF;
 	margin-top: 120px;
+	display: none;
 }
 
 .galeria .post-galeria .content-post-galeria{
