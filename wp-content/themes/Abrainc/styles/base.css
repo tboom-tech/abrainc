@@ -1585,18 +1585,12 @@ span.wpcf7-not-valid-tip{
 	height: 280px;	
 }
 
-<<<<<<< HEAD
 .page-template-page-galerias .indicadores .content-post-indicador,
-.page-template-page-eventos .indicadores .content-post-indicador{
+.page-template-page-eventos .indicadores .content-post-indicador {
 	background: #f8f8f8;
 	text-align: center;
 	padding: 35px;
-=======
-.page-template-page-galerias .indicadores .content-post-indicador{
-	background: #f8f8f8;
-	text-align: center;
-	padding: 80px 35px;
->>>>>>> origin/master
+	padding: 35px;
 	height: 280px;	
 }
 
