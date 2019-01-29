@@ -1905,7 +1905,16 @@ span.wpcf7-not-valid-tip{
 	display: inline-block;
 	width: 30%;
 }
-
+.eventos .listagem-noticias h4 {
+	color: #383b3e;
+    font-family: "Mermaid Bold";
+    font-size: 36px;
+    border-top: 2px solid #335274;
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px 20px 0px;
+    margin: 0px 15px 0px 0px;
+}
 .eventos .content-post-indicador p.dia{
     color: #373b3e;
     font-size: 50px;

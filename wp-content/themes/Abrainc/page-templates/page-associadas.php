@@ -66,8 +66,8 @@ get_template_part('common');
 			<div class="row">
 				<div class="col-md-12">
 					<h2>
-						Apoiadoras
-						<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page.png">
+						Apoio Institucional
+						<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page-apoio.png">
 					</h2>
 
 					<?php 

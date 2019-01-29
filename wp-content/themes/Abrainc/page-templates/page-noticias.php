@@ -99,7 +99,7 @@ get_template_part('common');
 						<span class="categorie">
 							<?php echo $categorias[0]->name; ?>
 			      		</span>
-			      		<p class="data_noticia"><?php the_date(); ?></p>
+			      		<p class="data_noticia"><?php echo get_the_date(); ?></p>
 			      		<h4><?php the_title(); ?></h4>
 			      		<div class="resumo_noticia">
 			      			<p><?php the_excerpt(); ?></p>

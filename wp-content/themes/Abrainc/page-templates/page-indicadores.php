@@ -25,7 +25,7 @@ get_template_part('common');
 			<div class="row">
 				<div class="col-md-6 content-indicadores">
 					<?php the_content(); ?>
-					<a href="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/pdf/Metodologia_RadarAbrainc-Fipe.pdf" target="_blank" class="bt-more">conheça a metodologia</a>
+					<a href="https://www.fipe.org.br/pt-br/indices/abrainc/#metodologia" target="_blank" class="bt-more">conheça a metodologia</a>
 				</div>
 
 				<div class="col-md-6">
