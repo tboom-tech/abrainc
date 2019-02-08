@@ -357,6 +357,21 @@ function create_post_type() {
         )
     );
 
+    register_post_type('compilacao',
+        array(
+          'labels' => array(
+              'name' => 'Compilação',
+              'singular_name' => 'Compilação',
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'menu_position' => 17,
+          'menu_icon' => 'dashicons-format-gallery',
+          'supports'  => array( 'title', 'editor' ),
+          'rewrite' => array('slug' => 'compilacao')
+        )
+    );
+
     flush_rewrite_rules();
 }    
 

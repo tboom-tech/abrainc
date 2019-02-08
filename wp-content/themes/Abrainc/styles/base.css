@@ -722,7 +722,12 @@ footer .tboom{
 	color: #FFF;
 	text-decoration: none;
 }
-
+.compilacao {
+	float: left;
+	margin-top: 90px;
+	position: absolute;
+	text-align: center;
+}
 #midias .galeria{
 	padding: 0px;
 }
@@ -770,7 +775,7 @@ footer .tboom{
 }
 
 .noticias .post-destaque{
-	padding: 20px 350px 50px 30px;
+	padding: 20px 90px 50px 30px;
 	background-size: cover;
 	margin-right: 50px;
 	margin-bottom: 30px;
