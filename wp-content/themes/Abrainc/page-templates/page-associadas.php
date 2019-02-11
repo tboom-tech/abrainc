@@ -56,7 +56,9 @@ get_template_part('common');
 				              	while ($loop->have_posts()) : $loop->the_post();
 							?>
 									<div class="col-md-2 col-xs-6 item associada">
-										<img src="<?php the_field('imagem_pagina'); ?>">
+										<a href="<?php the_field('link_site'); ?>" target="_blank">
+											<img src="<?php the_field('imagem_pagina'); ?>">
+										</a>
 									</div>
 							<?php endwhile; wp_reset_postdata(); ?>					
 						</div>
@@ -79,7 +81,9 @@ get_template_part('common');
 			              	while ($loop->have_posts()) : $loop->the_post();
 					?>
 						<div class="col-md-2 col-xs-6 item">
-							<img src="<?php the_field('imagem_pagina'); ?>">
+							<a href="<?php the_field('link_site'); ?>" target="_blank">
+								<img src="<?php the_field('imagem_pagina'); ?>">
+							</a>
 						</div>
 					<?php endwhile; wp_reset_postdata(); ?>						
 				</div>
