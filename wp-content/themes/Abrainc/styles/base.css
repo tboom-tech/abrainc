@@ -432,7 +432,7 @@ footer .tboom{
 }
 
 .noticias .overlay-home{
-	height: 445px;
+	height: 388px;
 }
 
 #posts-destaques .post-secundario.segundo-destaque .img-destaque{
@@ -775,10 +775,11 @@ footer .tboom{
 }
 
 .noticias .post-destaque{
-	padding: 45px 90px 50px 30px;
+	padding: 20px 90px 17px 30px;
 	background-size: cover;
 	margin-right: 50px;
 	margin-bottom: 30px;
+	height: 388px;
 }
 
 .noticias .post-destaque h2{

@@ -64,10 +64,10 @@ get_template_part('common');
 		<?php if ($count == 0) { ?>
 		  	<a href="<?php the_permalink(); ?>">
 	    		<?php 
-		    		if (get_field('imagem')) {
-		    			$imagem = get_field('imagem');
-		    		}else if (get_the_post_thumbnail_url()) {
+		    		if (get_the_post_thumbnail_url()) {
 		    			$imagem = get_the_post_thumbnail_url();
+		    		}else if (get_field('imagem')) {
+		    			$imagem = get_field('imagem');
 		    		} else{
 		    			$imagem = '/wp-content/themes/Abrainc/img/no-image-box.png';
 		    		}
