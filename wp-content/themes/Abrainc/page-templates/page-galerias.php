@@ -97,7 +97,8 @@ $DiasMes = array('01' => '31',
 				$data_fim = $ano.$mes.$DiasMes[$mes];
 			}else{
 				$ano = date('Y');
-				$mes = date('m');
+				// $mes = date('m');
+				$mes = 12;
 				// $data_inicio = $ano.$mes.'01';
 				$data_inicio = '20000101';
 				$data_fim = $ano.$mes.$DiasMes[$mes];
