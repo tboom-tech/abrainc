@@ -29,7 +29,7 @@ get_template_part('common');
 				</div>
 
 				<div class="col-md-6">
-					<form role="search" method="get" id="advanced-searchform" class="advanced-searchform" name="advanced-searchform" action="/indicadores/">
+					<form role="search" method="get" id="advanced-searchform" class="advanced-searchform" name="advanced-searchform" action="/radar/">
 						<div class="row">
 							<div class="form-group col-md-5 col-md-offset-7">
 								<p>Busque por um radar</p>
