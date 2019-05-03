@@ -13,7 +13,7 @@ get_template_part('common');
 				<div class="row">
 					<div class="col-md-12">
 						<h1>
-							Radar
+							Radar Trimestral
 							<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page-white.png">
 						</h1>
 					</div>

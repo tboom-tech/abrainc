@@ -166,7 +166,7 @@
 					</div>
 				</div>
 			</div>
-		</section>	
+		</section>			
 
 		<?php } else if ($categorias[0]->slug == 'radar'){ ?>
 
@@ -248,7 +248,89 @@
 					</div>
 				</div>
 			</div>
-		</section>		
+		</section>
+
+	<?php } else if ($categorias[0]->slug == 'indicador_antecedente'){ ?>
+
+		<section class="container-fluid type_post post_artigos">
+			<article class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<p class="categoria">Indicador Antecedente do Mercado Imobiliário</p>
+
+						<h1><?php the_title(); ?></h1>
+
+						<div class="content-post preview-content">
+							<?php the_content(); ?>
+
+							<a class="link-indicador bt-more" target="_blank" href="<?php the_field('link_radar'); ?>">
+								Veja AQUI
+							</a>							
+						</div>
+
+						<div class="share">
+							<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/share-facebook.png"></a>
+
+							<a href="https://twitter.com/home?status=?u=<?php the_permalink(); ?>" target="_blank"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/share-twitter.png"></a>
+						</div>						
+					</div>
+				</div>
+			</article>
+
+			<div class="hide-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 content-div text-right">
+							<div class="more bt-more" onClick="MoreContent();">Continuar Lendo</div>
+						</div>
+						<div class="col-md-6 content-div">
+							<a class="link bt-more" target="_blank" href="<?php the_field('link_radar'); ?>">
+								<div class="more">Ver indicador</div>
+							</a>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</section>	
+
+		<section id="posts-related" class="desktop">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h2>Notícias relacionadas</h2>
+				      	<?php
+				          	$loop = new WP_Query(array('post_type' => 'post',
+				                      'orderby' => 'post_date',
+				                      'order' => 'DESC',
+				                      'posts_per_page' => 2
+				                    ));
+				          	while ($loop->have_posts()) : $loop->the_post();
+				       	?>
+							<div class="post-list-destaque">
+						    	<a href="<?php the_permalink(); ?>">
+						    		<?php 
+						    		if (get_field('imagem')) {
+						    			$bg = get_field('imagem');
+						    		}else{
+						    			$bg = '/wp-content/themes/Abrainc/img/no-image-box.png';
+						    		}
+						    		?>
+									<div class="bg-post" style="background-image: url('<?php echo $bg; ?>');"></div>
+									<div class="content-post">
+										<span class="categorie">
+											<?php echo $categorias[0]->name; ?>
+							      		</span>
+							      		<h4><?php the_title(); ?></h4>
+							      		<p><?php the_excerpt(); ?></p>
+							      		<p class="tags"><?php the_tags( '', ', ', '' ); ?></p>					
+						      		</div>      	
+						      	</a>
+					      	</div>			       	
+				       <?php endwhile; ?>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<?php } else if ($categorias[0]->slug == 'eventos'){ ?>
 

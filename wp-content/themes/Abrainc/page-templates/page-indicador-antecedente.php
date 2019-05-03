@@ -1,6 +1,6 @@
 <?php 
 	
-	/* Template Name: Indicadores */
+	/* Template Name: Indicador Antecedente */
 	
 get_header();
 get_template_part('common');
@@ -13,7 +13,7 @@ get_template_part('common');
 				<div class="row">
 					<div class="col-md-12">
 						<h1>
-							Indicador Mensal
+							Indicador Antecedente do Mercado Imobiliário
 							<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page-white.png">
 						</h1>
 					</div>
@@ -25,25 +25,14 @@ get_template_part('common');
 			<div class="row">
 				<div class="col-md-6 content-indicadores">
 					<?php the_content(); ?>
-					<a href="https://www.fipe.org.br/pt-br/indices/abrainc/#metodologia" target="_blank" class="bt-more">conheça a metodologia</a>
+					<a href="http://services.fipe.org.br/RadarImobiliario/radar_imobiliario.aspx" target="_blank" class="bt-more">conheça a metodologia</a>
 				</div>
 
 				<div class="col-md-6">
-					<?php
-					    $loop = new WP_Query(array('post_type' => 'compilacao', 
-			                  'orderby' => 'post_date',
-			                  'order' => 'DESC',
-			                  'posts_per_page' => 1
-			              	));
-					        while ($loop->have_posts()) : $loop->the_post(); 
-					?>	
-						<a href="<?php the_field('arquivo_compilacao'); ?>" target="_blank" class="bt-more compilacao">COMPILAÇÃO DE DADOS<br />ABRAINC/FIPE</a>
-					<?php endwhile; ?>
-					
-					<form role="search" method="get" id="advanced-searchform" class="advanced-searchform" name="advanced-searchform" action="/indicadores/">
+					<form role="search" method="get" id="advanced-searchform" class="advanced-searchform" name="advanced-searchform" action="/radar/">
 						<div class="row">
 							<div class="form-group col-md-5 col-md-offset-7">
-								<p>Busque por um indicador</p>
+								<p>Busque por um radar</p>
 								<select id="mes" name="mes" required>
 									<option value="">Mês</option>
 									<option value="Janeiro">Janeiro</option>
@@ -100,7 +89,7 @@ get_template_part('common');
 		        array(
 		            'taxonomy' => 'category',
 		            'field' => 'slug',
-		            'terms' => 'indicadores'
+		            'terms' => 'indicador_antecedente'
 		        )
 		       )
             ));

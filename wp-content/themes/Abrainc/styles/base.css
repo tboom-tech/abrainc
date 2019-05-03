@@ -19,6 +19,19 @@ body {
 		url("../fonts/Mermaid10.svg#Mermaid-Bold") format("svg");
 	font-weight:normal;
 	font-style:normal;}
+@font-face {
+    font-family: 'Georgia';
+    src: url('../fonts/Georgia.eot');
+    src: url('../fonts/Georgia.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Georgia.woff2') format('woff2'),
+        url('../fonts/Georgia.woff') format('woff'),
+        url('../fonts/Georgia.ttf') format('truetype'),
+        url('../fonts/Georgia.svg#Georgia') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 b, strong {
 	font-weight: 400!important;
@@ -359,7 +372,7 @@ footer .tboom{
 }
 
 #posts-destaques .post-destaque h2{
-	font-family:"Mermaid Bold";
+	font-family:"Georgia";
 	margin-top: 175px;
 	z-index: 1;
     position: relative;	
@@ -398,7 +411,7 @@ footer .tboom{
 }
 
 #posts-destaques .post-secundario h3{
-    font-family: "Mermaid Bold";
+    font-family: "Georgia";
     color: #262424;
     font-size: 18px;
     display: inline-block;
@@ -408,7 +421,7 @@ footer .tboom{
 }
 
 #posts-destaques .post-secundario.segundo-destaque h3{
-	font-family:"Mermaid Bold";
+	font-family:"Georgia";
 	color: #262424;
 	font-size: 21px;
 	margin: 0px;
@@ -501,7 +514,7 @@ footer .tboom{
 
 #list-posts .post-list-destaque h4{
     color: #383b3e;
-    font-family: "Mermaid Bold";
+    font-family: "Georgia";
     font-size: 21px;
     height: 45px;
     margin-bottom: 20px;
@@ -640,7 +653,7 @@ footer .tboom{
 #artigos .content-title h5{
 	color: #383b3e;
 	font-size: 21px;
-	font-family: "Mermaid Bold";
+	font-family: "Georgia";
 }
 
 #artigos .content-title p{
@@ -673,7 +686,7 @@ footer .tboom{
 #midias .post-video h5{
     display: inline-block;
     color: #ffffff;
-    font-family: "Mermaid Bold";
+    font-family: "Georgia";
     font-size: 24px;
     width: 330px;
     padding-left: 15px;
@@ -784,7 +797,7 @@ footer .tboom{
 }
 
 .noticias .post-destaque h2{
-	font-family:"Mermaid Bold";
+	font-family:"Georgia";
 	margin-top: 175px;
     z-index: 1;
     position: relative;	
@@ -848,7 +861,7 @@ footer .tboom{
 
 .noticias .post-list-destaque h4{
     color: #383b3e;
-    font-family: "Mermaid Bold";
+    font-family: "Georgia";
     font-size: 21px;
     margin-bottom: 0px;
 }
@@ -952,7 +965,7 @@ span.wpcf7-not-valid-tip{
 .associadas h1,
 .associadas h2{
 	color: #383b3e;
-	font-size: 110px;
+	font-size: 79px;
 	font-family: 'Mermaid-Bold';
 	font-weight: bold;
 }
@@ -960,7 +973,7 @@ span.wpcf7-not-valid-tip{
 .associadas .content-associadas{
 	float: right;
     width: 300px;
-    margin-top: 20px;
+    margin-top: -15px;
     text-align: right;	
 }
 
@@ -1138,6 +1151,15 @@ span.wpcf7-not-valid-tip{
     margin-bottom: 20px;
 }
 
+.page-id-13654 .artigos h1 {
+	color: #383b3e;
+    font-size: 75px;
+    font-family: 'Mermaid-Bold';
+    font-weight: bold;
+    border-bottom: 2px solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px
+}
 .publicacoes h1 img,
 .artigos h1 img{
     float: right;
@@ -1525,7 +1547,8 @@ span.wpcf7-not-valid-tip{
 	margin-top: 0px;
 }
 
-.indicadores h1{
+.indicadores h1,
+.page-id-13654 .indicadores h1{
 	color: #FFF;
 	border: none;
 }
@@ -1590,6 +1613,12 @@ span.wpcf7-not-valid-tip{
 	text-align: center;
 	padding: 80px 35px;
 	height: 280px;	
+}
+.page-id-13578 .indicadores .content-post-indicador {
+	background: #f8f8f8;
+	text-align: left;
+    padding: 25px;
+    height: 70px;
 }
 
 .page-template-page-galerias .indicadores .content-post-indicador,
@@ -1967,11 +1996,11 @@ span.wpcf7-not-valid-tip{
 }
 
 .estudos .content-post-indicador p.title_event{
-	height: 100px;
+	height: 50px;
     /*overflow: hidden;*/	
 }
 
-.estudos .content-post-indicador p.title_event:before{
+/*.estudos .content-post-indicador p.title_event:before{
     content: "";
     width: 40px;
     height: 2px;
@@ -1979,7 +2008,7 @@ span.wpcf7-not-valid-tip{
     background: #246ecb;
     left: 43%;
     margin-top: 200px;
-}	
+}	*/
 
 .estudos .content-post-indicador:hover p.title_event:before{
 	background: #FFF;
