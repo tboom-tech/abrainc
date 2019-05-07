@@ -12,3 +12,8 @@ $('.close-video').click(function () {
     $('#frame-video').attr('src',' ');
     $('.modal').hide();
 })
+
+$('.fechar').click(function(){
+	$('.modal-live').fadeOut('');
+	$('#live').attr('src',' ');
+})

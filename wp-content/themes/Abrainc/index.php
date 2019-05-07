@@ -62,8 +62,17 @@ get_header(); ?>
 					      		<h2><?php the_title(); ?></h2>
 					      		<p><?php the_excerpt(); ?></p>
 					      		<div class="overlay-home"></div>
+
 					      	</div>
 				      	</a>
+<!-- 
+				      	<div class="modal-live">
+				      		<img class="fechar" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/fechar.png">
+				      		<div class="live">
+
+				      			<iframe id="live" width="852" height="480" src="https://www.youtube.com/embed/1dgXVHiucZo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				      		</div>
+				      	</div> -->
 			      	<?php endwhile; wp_reset_postdata(); ?>					
 				</div>
 				<div class="col-md-4">

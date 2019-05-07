@@ -2412,7 +2412,30 @@ p.desc_associe{
 .mobile{
 	display: none;
 }
-
+.modal-live {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 9999999;
+}
+.modal-live .live {
+	padding-top: 80px;
+	text-align: center;
+	margin: 0 auto;
+}
+.modal-live .fechar {
+	position: absolute;
+	margin: 0 auto;
+	text-align: center;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+	margin-top: 10px;
+}
 @media (max-width: 1024px) {
 	.mobile{
 		display: block;
@@ -2751,5 +2774,8 @@ p.desc_associe{
 
 	.type_post .excerpt{
 		padding: 20px 0 0;
+	}
+	.modal-live .live iframe {
+		width: 100%;
 	}
 }
