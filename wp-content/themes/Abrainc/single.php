@@ -263,7 +263,7 @@
 						<div class="content-post preview-content">
 							<?php the_content(); ?>
 
-							<a class="link-indicador bt-more" target="_blank" href="<?php the_field('link_radar'); ?>">
+							<a class="link-indicador bt-more" target="_blank" href="<?php the_field('link_indicador_antecedente'); ?>">
 								Veja AQUI
 							</a>							
 						</div>
@@ -284,7 +284,7 @@
 							<div class="more bt-more" onClick="MoreContent();">Continuar Lendo</div>
 						</div>
 						<div class="col-md-6 content-div">
-							<a class="link bt-more" target="_blank" href="<?php the_field('link_radar'); ?>">
+							<a class="link bt-more" target="_blank" href="<?php the_field('link_indicador_antecedente'); ?>">
 								<div class="more">Ver indicador</div>
 							</a>
 						</div>						

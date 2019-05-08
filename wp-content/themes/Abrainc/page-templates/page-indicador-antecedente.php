@@ -25,7 +25,7 @@ get_template_part('common');
 			<div class="row">
 				<div class="col-md-6 content-indicadores">
 					<?php the_content(); ?>
-					<a href="http://services.fipe.org.br/RadarImobiliario/radar_imobiliario.aspx" target="_blank" class="bt-more">conheça a metodologia</a>
+					<a href="https://www.fipe.org.br/pt-br/indices/abrainc/#metodologia" target="_blank" class="bt-more">conheça a metodologia</a>
 				</div>
 
 				<div class="col-md-6">
@@ -51,6 +51,7 @@ get_template_part('common');
 
 								<select id="ano" name="ano" required>
 									<option value="">Ano</option>
+									<option value="2018">2019</option>
 									<option value="2018">2018</option>
 									<option value="2017">2017</option>
 									<option value="2016">2016</option>
@@ -89,7 +90,7 @@ get_template_part('common');
 		        array(
 		            'taxonomy' => 'category',
 		            'field' => 'slug',
-		            'terms' => 'indicador_antecedente'
+		            'terms' => 'indicador-antecedente'
 		        )
 		       )
             ));
