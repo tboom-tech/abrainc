@@ -213,8 +213,8 @@ get_template_part('common');
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
-					<h4>Guias e estudos</h4>
-					<a class="float-right link-more-pub" href="/estudos/">Mais guias e estudos  »</a>
+					<h4>Estudos e Guias</h4>
+					<a class="float-right link-more-pub" href="/estudos/">Mais estudos e guias  »</a>
 					<div class="row">
 			      	<?php
 			          	$loop = new WP_Query(array('post_type' => 'post',
@@ -231,14 +231,20 @@ get_template_part('common');
 			                    ));
 			              	while ($loop->have_posts()) : $loop->the_post();
 			      	?>
-						<div class="post-estudo col-md-3">
+						<div class="post-estudo col-md-12">
 							<div class="content-post-estudo">
-						    	<a href="<?php the_permalink(); ?>">
-									<p class="title_event"><?php the_title(); ?></p>
+						    	<a href="<?php the_field('link_estudos'); ?>" target="_blank">
+						    		<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/btn-baixar.png">
+									<p class="title_event"><?php the_title(); ?> </p>
+									<p>Instituição e Autor: <?php the_field('aut_estudo'); ?></p>
+									<p class="data_event"><?php the_date('d/m/Y'); ?></p>
 									<div class="description_event">
 										<?php the_excerpt(); ?>
 									</div>
 						      	</a>
+					      	</div>
+					      	<div>
+					      		<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-ponto.png">
 					      	</div>
 				      	</div>	
 			      	<?php endwhile; wp_reset_postdata(); ?>		

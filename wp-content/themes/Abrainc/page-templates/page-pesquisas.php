@@ -12,7 +12,7 @@ get_template_part('common');
 			<div class="row">
 				<div class="col-md-12">
 					<h1>
-						Guias e Estudos
+						Estudos
 						<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page.png">
 					</h1>
 				</div>
@@ -55,16 +55,22 @@ get_template_part('common');
 			                    ));
 			              	while ($loop->have_posts()) : $loop->the_post();
 			      	?>
-			      		<div class="post-galeria col-md-3">
-			      			<a href="<?php the_permalink(); ?>">
+			      		<div class="post-galeria col-md-12">
+			      			<a href="<?php the_field('link_estudos'); ?>" target="_blank">
 								<div class="content-post">
-				      				<div class="post-date">
-				      					<?php the_date('d/m/Y'); ?>
-				      				</div>
-
-						      		<p><?php the_title(); ?></p>			
+									<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/btn-baixar.png">
+						      		<p class="title_event"><?php the_title(); ?> </p>
+						      		<p class="aut">Instituição e Autor: <?php the_field('aut_estudo'); ?></p>
+						      		<p class="data_event"><?php the_date('d/m/Y'); ?></p>
+						      		<div class="description_event">
+						      			<?php the_excerpt(); ?>
+						      		</div>
+						      	</p>			
 					      		</div>  				      			
 			      			</a>
+			      			<div>
+					      		<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-ponto.png">
+					      	</div>
 			      		</div>
 			      	<?php endwhile; wp_reset_postdata(); ?>		
 			      	</div>

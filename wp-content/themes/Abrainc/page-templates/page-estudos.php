@@ -13,7 +13,7 @@ get_template_part('common');
 				<div class="row">
 					<div class="col-md-12">
 						<h1>
-							Guias e Estudos
+							Estudos e Guias
 							<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page-white-peq.png">
 						</h1>
 					</div>
@@ -32,7 +32,7 @@ get_template_part('common');
 		<div class="container">
 			<div class="row listagem-noticias">
 				<div class="col-md-12">
-					<h4>Estudos & Pesquisas</h4>
+					<h4>Estudos</h4>
 					
 					<div class="row">
 					<?php 
@@ -54,14 +54,20 @@ get_template_part('common');
 					            ));
 					      	while ($noticias->have_posts()) : $noticias->the_post();
 					?>
-					<div class="post-indicador col-md-3">
+					<div class="post-indicador col-md-12">
 						<div class="content-post-indicador">
-					    	<a href="<?php the_permalink(); ?>">
-								<p class="title_event"><?php the_title(); ?></p>
+					    	<a href="<?php the_field('link_estudos'); ?>" target="_blank">
+				    			<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/btn-baixar.png">
+								<p class="title_event"><?php the_title(); ?> </p>
+								<p>Instituição e Autor: <?php the_field('aut_estudo'); ?></p>
+								<p class="data_event"><?php the_date('d/m/Y'); ?></p>
 								<div class="description_event">
 									<?php the_excerpt(); ?>
 								</div>
 					      	</a>
+				      	</div>
+				      	<div>
+				      		<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-ponto.png">
 				      	</div>
 			      	</div>	
 			<?php endwhile; ?>
@@ -74,7 +80,7 @@ get_template_part('common');
 		<div class="container">
 			<div class="row listagem-noticias">
 				<div class="col-md-12">
-					<h4>Guias & Publicações</h4>
+					<h4>Guias</h4>
 					
 					<div class="row">
 					<?php 
@@ -96,14 +102,20 @@ get_template_part('common');
 					            ));
 					      	while ($noticias->have_posts()) : $noticias->the_post();
 					?>
-					<div class="post-indicador col-md-3">
+					<div class="post-indicador col-md-12">
 						<div class="content-post-indicador">
-					    	<a href="<?php the_permalink(); ?>">
-								<p class="title_event"><?php the_title(); ?></p>
+					    	<a href="<?php the_field('link_guias'); ?>" target="_blank">
+					    		<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/btn-baixar.png">
+								<p class="title_event"><?php the_title(); ?> </p>
+								<p>Instituição e Autor: <?php the_field('aut_estudo'); ?></p>
+								<p class="data_event"><?php the_date('d/m/Y'); ?></p>
 								<div class="description_event">
 									<?php the_excerpt(); ?>
 								</div>
 					      	</a>
+				      	</div>
+				      	<div>
+				      		<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-ponto.png">
 				      	</div>
 			      	</div>	
 			<?php endwhile; ?>
