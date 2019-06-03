@@ -1234,29 +1234,35 @@ span.wpcf7-not-valid-tip{
 }
 
 .estudos-publicacoes p.title_event {
-    height: 70px;
-    overflow: hidden;
 	color: #373b3e;
     font-family: 'Mermaid-Bold';
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: bold;    
+}
+.estudos-publicacoes p.data_event {
+	color: #246ecb;
+    font-family: 'Mermaid-B	old';
+    font-size: 24px;
     font-weight: bold;    
 }
 
 .estudos-publicacoes .content-post-estudo {
     background: #f8f8f8;
-    text-align: center;
-    padding: 35px;
-    height: 280px;
+    text-align: left;
+    padding: 75px 35px 35px;
 }
-
-.estudos-publicacoes .post-estudo {
+.estudos-publicacoes .content-post-estudo img {
+	float: right;
+	margin-top: -65px;
+}
+/*.estudos-publicacoes .post-estudo {
     margin-bottom: 20px;
-}
+}*/
 
 .estudos-publicacoes .content-post-estudo .description_event {
-    height: 100px;
-    overflow: hidden;
-    margin-top: 55px;
+/*    height: 100px;
+    overflow: hidden;*/
+    margin-top: 0px;
     font-size: 14px;
     color: #373b3e;
 }
@@ -1269,6 +1275,7 @@ span.wpcf7-not-valid-tip{
     background: #246ecb;
     left: 43%;
     margin-top: 100px;
+    display: none;
 }
 
 .estudos-publicacoes .content-post-estudo:hover {
@@ -1614,11 +1621,20 @@ span.wpcf7-not-valid-tip{
 	padding: 80px 35px;
 	height: 280px;	
 }
+.indicadores .content-post-indicador{
+	background: #f8f8f8;
+	text-align: center;
+	padding: 80px 35px;
+	height: 280px;	
+}
+.indicadores .content-post-indicador img {
+	float: right;
+	margin-top: -55px;
+}
 .page-id-13578 .indicadores .content-post-indicador {
 	background: #f8f8f8;
 	text-align: left;
-    padding: 25px;
-    height: 70px;
+    padding: 75px 35px 35px; 
 }
 
 .page-template-page-galerias .indicadores .content-post-indicador,
@@ -1725,7 +1741,7 @@ span.wpcf7-not-valid-tip{
     font-size: 36px;
     font-family: 'Mermaid-Bold';
     color: #383b3e;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
     font-weight: bold;
     letter-spacing: 2px;
     height: 50px;    
@@ -1743,18 +1759,60 @@ span.wpcf7-not-valid-tip{
     background: #246ecb;
     left: 43%;
     margin-top: 70px;
+    display: none;
 }
 
 .releases p{
 	color: #383b3e;
 	font-size: 16px;
+	text-align: left;
+}
+.page-id-5752 .releases p{
+	color: #383b3e;
+	font-size: 16px;
+	text-align: left;
+	height: 115px;
+	overflow: hidden;
+}
+.releases p.aut {
+	color: #246aec;
+}
+.releases p.title_event {
+	color: #383b3e;
+	font-size: 24px;
+	text-align: left;
+	font-weight: bold;
+}
+.releases p.data_event {
+	color: #246ecb;
+	font-size: 24px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.page-id-6302 .releases p{
+	color: #383b3e;
+	font-size: 16px;
 	text-align: center;
-	height: 70px;
+	height: 110px;
 	overflow: hidden;
 }
 
 .midia-publicacoes.releases .content-post{
 	margin-bottom: 30px;
+}
+.page-id-13591 .midia-publicacoes.releases .content-post,
+.page-id-13589 .midia-publicacoes.releases .content-post {
+	margin-bottom: 0;
+}
+.page-id-13591 .midia-publicacoes.releases .content-post img,
+.page-id-13589 .midia-publicacoes.releases .content-post img {
+	float: right;
+	margin-top: -55px;
+}
+.page-id-13591 .midia-publicacoes .content-post,
+.page-id-13589 .midia-publicacoes .content-post {
+	padding: 75px 35px 35px;
 }
 
 .midia-publicacoes .assessora h5{
@@ -1983,6 +2041,12 @@ span.wpcf7-not-valid-tip{
     font-size: 18px;
     font-weight: bold;	
 }
+.eventos .content-post-indicador p.data_event{
+	color: #246ecb;
+	font-family: 'Mermaid-Bold';
+    font-size: 18px;
+    font-weight: bold;	
+}
 
 .eventos .content-post-indicador p.description_event{
 	color: #373b3e;
@@ -1995,10 +2059,10 @@ span.wpcf7-not-valid-tip{
 	color: #FFF;
 }
 
-.estudos .content-post-indicador p.title_event{
-	height: 50px;
-    /*overflow: hidden;*/	
-}
+/*.estudos .content-post-indicador p.title_event{
+	height: 20px;
+    overflow: hidden;
+}*/
 
 /*.estudos .content-post-indicador p.title_event:before{
     content: "";
@@ -2015,12 +2079,11 @@ span.wpcf7-not-valid-tip{
 }
 
 .estudos .content-post-indicador .description_event{
-    height: 100px;
-    overflow: hidden;
-    margin-top: 55px;
+/*    height: 75px;
+    overflow: hidden;*/
+    margin-top: 5px;
     font-size: 14px;
     color: #373b3e;
-    display: none;
 }
 
 .estudos .content-post-indicador:hover .description_event{
