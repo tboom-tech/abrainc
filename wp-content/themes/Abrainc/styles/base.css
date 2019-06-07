@@ -1242,7 +1242,7 @@ span.wpcf7-not-valid-tip{
 .estudos-publicacoes p.data_event {
 	color: #246ecb;
     font-family: 'Mermaid-B	old';
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;    
 }
 
@@ -1631,7 +1631,7 @@ span.wpcf7-not-valid-tip{
 	float: right;
 	margin-top: -55px;
 }
-.page-id-13578 .indicadores .content-post-indicador {
+.page-id-13574 .indicadores .content-post-indicador {
 	background: #f8f8f8;
 	text-align: left;
     padding: 75px 35px 35px; 
@@ -1785,9 +1785,10 @@ span.wpcf7-not-valid-tip{
 }
 .releases p.data_event {
 	color: #246ecb;
-	font-size: 24px;
+	font-size: 18px;
 	text-align: left;
 	font-weight: bold;
+	font-family: 'Mermaid-Bold';
 }
 
 .page-id-6302 .releases p{
@@ -1801,17 +1802,17 @@ span.wpcf7-not-valid-tip{
 .midia-publicacoes.releases .content-post{
 	margin-bottom: 30px;
 }
-.page-id-13591 .midia-publicacoes.releases .content-post,
-.page-id-13589 .midia-publicacoes.releases .content-post {
+.page-id-14173 .midia-publicacoes.releases .content-post,
+.page-id-14171 .midia-publicacoes.releases .content-post {
 	margin-bottom: 0;
 }
-.page-id-13591 .midia-publicacoes.releases .content-post img,
-.page-id-13589 .midia-publicacoes.releases .content-post img {
+.page-id-14173 .midia-publicacoes.releases .content-post img,
+.page-id-14171 .midia-publicacoes.releases .content-post img {
 	float: right;
 	margin-top: -55px;
 }
-.page-id-13591 .midia-publicacoes .content-post,
-.page-id-13589 .midia-publicacoes .content-post {
+.page-id-14173 .midia-publicacoes .content-post,
+.page-id-14171 .midia-publicacoes .content-post {
 	padding: 75px 35px 35px;
 }
 
