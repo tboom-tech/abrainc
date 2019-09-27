@@ -1,3 +1,4 @@
+
 <?php 
 	
 	/* Template Name: Publicações */
@@ -33,6 +34,11 @@ get_template_part('common');
 						Guias e estudos
 					</a>																				
 				</div>	
+			</div>
+			<div class="row">
+				<div class="col-md-12" onclick="Sair();">
+					sair
+				</div>
 			</div>
 		</div>
 	</section>	

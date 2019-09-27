@@ -2500,6 +2500,134 @@ p.desc_associe{
 	cursor: pointer;
 	margin-top: 10px;
 }
+
+/* Formulario Login */
+.formulario{
+	width: 1000px;
+	margin: 0 auto;
+}
+#form_cadastro,
+#form_login,
+#form_senha {
+    background: #ffffff;
+    width: 310px;
+    margin: 15px auto;
+}
+#form_cadastro p,
+#form_login p,
+#form_senha p {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #58585a;
+    padding: 5px 20px;
+    text-align: center;
+}
+#form_cadastro label,
+#form_login label,
+#form_senha label{
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #58585a;
+    margin: 10px 0 0;
+}
+.agenda-nome,
+.agenda-email,
+.cel {
+    text-align: left;
+    padding-bottom: 10px; 
+}
+.agenda-email a,
+.agenda-email a:hover{
+	text-decoration: none;
+}
+.agenda-nome input,
+.cel input,
+.agenda-email input {
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #58585a;
+    font-family: 'Open Sans', sans-serif;
+    color: #58585a;
+    background-color: #ffffff; 
+    font-size: 14px;
+    padding: 15px;
+    width: 300px;
+}
+#form_cadastro input[type="button"].bt_azul,
+#form_cadastro input[type="submit"].bt_azul,
+#form_login input[type="button"].bt_azul,
+#form_login input[type="submit"].bt_azul,
+#form_senha input[type="button"].bt_azul,
+#form_senha input[type="submit"].bt_azul  {
+    width: 300px;
+    background: #143a60;
+    font-size: 18px;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+#sucesso-cadastro {
+    padding-top: 110px;
+    background: #ffffff;
+    width: 100%;
+    z-index: 999999;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+#sucesso-cadastro .msg-sucesso .fechar {
+    float: right;
+    padding-right: 15px;
+    margin-top: 14px;
+    cursor: pointer;
+}
+#sucesso-cadastro .msg-sucesso .icone{
+    padding-left: 60px;
+    margin-top: 30px;
+}
+#sucesso-cadastro .msg-sucesso {
+    width: 300px;
+    background: #ffffff;
+    margin: 0 auto;
+}
+#sucesso-cadastro .msg-sucesso .icone-whats {
+    color: #58585a;
+    font-size: 24px;
+    font-family: 'gothambold';
+    padding: 36px 34px 10px;
+    line-height: 25px;
+}
+#sucesso-cadastro .msg-sucesso .breve{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #58585a;
+    padding: 0 35px;
+}
+.error-form{
+    border: 1px solid #F00 !important;
+}
+
+.valide-form{
+    border: 1px solid #0F0 !important;
+}
+#sucesso-recuperar{
+	display: none;
+}
+a.deslogar{
+	float: right;
+	margin-top: 10px;
+}
+
 @media (max-width: 1024px) {
 	.mobile{
 		display: block;
@@ -2840,6 +2968,9 @@ p.desc_associe{
 		padding: 20px 0 0;
 	}
 	.modal-live .live iframe {
+		width: 100%;
+	}
+	.formulario {
 		width: 100%;
 	}
 }

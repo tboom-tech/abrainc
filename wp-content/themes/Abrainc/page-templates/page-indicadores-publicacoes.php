@@ -1,3 +1,18 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION['usuario_log'])){
+		header('Location: /indicadores-publicacoes-login/');
+		session_destroy();
+	}
+
+	if(isset($_GET['deslogar'])){
+		session_destroy();
+		header('Location: /indicadores-publicacoes-login/');
+	}
+
+?>
+
 <?php 
 	
 	/* Template Name: Indicadores Publicações */
@@ -31,6 +46,11 @@ get_template_part('common');
 					</a>
 																				
 				</div>	
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<a class="deslogar" href="?deslogar">sair</a>
+				</div>
 			</div>
 		</div>
 	</section>	

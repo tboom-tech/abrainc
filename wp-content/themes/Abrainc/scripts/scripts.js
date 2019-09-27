@@ -17,3 +17,176 @@ $('.fechar').click(function(){
 	$('.modal-live').fadeOut('');
 	$('#live').attr('src',' ');
 })
+
+$('.fechar').click(function(){
+	$('#sucesso-cadastro').fadeOut('');
+})
+
+$(document).ready(function() {    
+    $('#telefone_cadastro').mask('(00) 0000-00000');
+});
+
+//Função para checar se campo e-mail está correto
+function checkMail(mail){
+    var er = new RegExp(/^[A-Za-z0-9_\-\.]+@[A-Za-z0-9_\-\.]{2,}\.[A-Za-z0-9]{2,}(\.[A-Za-z0-9])?/);
+    if(typeof(mail) == "string"){
+        if(er.test(mail)){ return true; }
+    }else if(typeof(mail) == "object"){
+            if(er.test(mail.value)){ 
+                return true; 
+            }
+    }else{
+            return false;
+     }
+}
+
+
+function EnviaCadastro(local) {
+    errors = 0;
+    if($('#email_'+local).val()=="" || checkMail($('#email_'+local).val())!=true){
+        $('#email_'+local).addClass('error-form');
+        $('#email_'+local).removeClass('valide-form');
+        errors++;
+    } else {
+        $('#email_'+local).addClass('valide-form');
+        $('#email_'+local).removeClass('error-form');
+    }
+
+    if($('#nome_'+local).val()==""){
+        $('#nome_'+local).addClass('error-form');
+        $('#nome_'+local).removeClass('valide-form');
+        errors++;
+    } else {
+        $('#nome_'+local).addClass('valide-form');
+        $('#nome_'+local).removeClass('error-form');
+    }
+
+    if($('#telefone_'+local).val()==""){
+        $('#telefone_'+local).addClass('error-form');
+        $('#telefone_'+local).removeClass('valide-form');
+        errors++;
+    } else {
+        $('#telefone_'+local).addClass('valide-form');
+        $('#telefone_'+local).removeClass('error-form');
+    }
+
+    if($('#login_'+local).val()==""){
+        $('#login_'+local).addClass('error-form');
+        $('#login_'+local).removeClass('valide-form');
+        errors++;
+    } else {
+        $('#login_'+local).addClass('valide-form');
+        $('#login_'+local).removeClass('error-form');
+    }
+
+    if($('#senha_'+local).val()==""){
+        $('#senha_'+local).addClass('error-form');
+        $('#senha_'+local).removeClass('valide-form');
+        errors++;
+    } else {
+        $('#senha_'+local).addClass('valide-form');
+        $('#senha_'+local).removeClass('error-form');
+    }
+
+  if (errors == 0) {
+          var dados = $('#form_'+local).serialize();
+
+          //Captura do cookie
+          var utm_source = readCookie('utm_source');
+          var utm_medium = readCookie('utm_medium');
+          var utm_campaign = readCookie('utm_campaign');
+          var gclid = readCookie('gclid');
+
+          if (utm_source) {
+            var midia = utm_source+' > '+utm_medium+' > '+utm_campaign;
+          }else if (gclid){
+            var midia = 'google/cpc';
+          }else{
+            var midia = 'Acesso Direto';
+          }
+
+          console.log(midia);
+
+          $.ajax({
+            type: 'POST',
+            data: {dados},
+            url:'/wp-content/themes/Abrainc/cadastro.php', 
+              success: function(retorno){
+                $('#sucesso-'+local).show();
+                $('#form_'+local+' input').val('');
+                $('#form_'+local+' input').removeClass('valide-form');
+
+              }
+          });
+      } 
+}
+
+function RecuperaSenha(local) {
+    errors = 0;
+    if($('#email_'+local).val()=="" || checkMail($('#email_'+local).val())!=true){
+        $('#email_'+local).addClass('error-form');
+        $('#email_'+local).removeClass('valide-form');
+        errors++;
+    } else {
+        $('#email_'+local).addClass('valide-form');
+        $('#email_'+local).removeClass('error-form');
+    }
+
+  if (errors == 0) {
+          var dados = $('#form_'+local).serialize();
+
+          //Captura do cookie
+          var utm_source = readCookie('utm_source');
+          var utm_medium = readCookie('utm_medium');
+          var utm_campaign = readCookie('utm_campaign');
+          var gclid = readCookie('gclid');
+
+          if (utm_source) {
+            var midia = utm_source+' > '+utm_medium+' > '+utm_campaign;
+          }else if (gclid){
+            var midia = 'google/cpc';
+          }else{
+            var midia = 'Acesso Direto';
+          }
+
+          console.log(midia);
+
+          $.ajax({
+            type: 'POST',
+            data: dados,
+            url:'/wp-content/themes/Abrainc/consulta.php', 
+              success: function(retorno){
+                if (retorno == 'não encontrado') {
+                  alert('E-mail não encontrado');
+                }else{
+                  $('#sucesso-recuperar').show();
+                  $('#form_'+local+' input.input-form').val('');
+                  $('#form_'+local+' input').removeClass('valide-form');
+                }  
+              }
+          });
+      } 
+}
+
+// Cookies
+function createCookie(name, value, days) {
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    var expires = "; expires=" + date.toGMTString();
+  } else var expires = "";
+
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+

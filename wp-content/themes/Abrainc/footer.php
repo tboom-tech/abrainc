@@ -150,7 +150,9 @@
 	})();
 </script>
 
-<script src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/scripts/scripts.js"></script>
+<script src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/scripts/jquery-3.3.1.min.js"></script>
+<script src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/scripts/jquery.mask.js"></script>
+<script src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/scripts/scripts.js?v=2"></script>
 
 <?php wp_footer(); ?>
 </body>

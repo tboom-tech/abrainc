@@ -1,3 +1,18 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION['usuario_log'])){
+		header('Location: /indicadores-publicacoes-login/');
+		session_destroy();
+	}
+
+	if(isset($_GET['deslogar'])){
+		session_destroy();
+		header('Location: /indicadores-publicacoes-login/');
+	}
+
+?>
+
 <?php 
 	
 	/* Template Name: Radar */
@@ -17,12 +32,18 @@ get_template_part('common');
 							<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page-white.png">
 						</h1>
 					</div>
+					
 				</div>	
 			</div>	
 		</div>
 
 		<div class="container">
 			<div class="row">
+				<div class="row">
+						<div class="col-md-12">
+							<a class="deslogar" href="?deslogar">sair</a>
+						</div>
+					</div>
 				<div class="col-md-6 content-indicadores">
 					<?php the_content(); ?>
 					<a href="http://services.fipe.org.br/RadarImobiliario/radar_imobiliario.aspx" target="_blank" class="bt-more">conheça a metodologia</a>
