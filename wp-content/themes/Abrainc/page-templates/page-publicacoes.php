@@ -29,16 +29,8 @@ get_template_part('common');
 					</a>
 					<a href="/noticias/listagem-podcasts/">
 						Rádio Abrainc
-					</a>
-					<a href="/estudos/">
-						Guias e estudos
-					</a>																				
+					</a>																	
 				</div>	
-			</div>
-			<div class="row">
-				<div class="col-md-12" onclick="Sair();">
-					sair
-				</div>
 			</div>
 		</div>
 	</section>	
@@ -215,7 +207,7 @@ get_template_part('common');
 		</div>
 	</section>	
 
-	<section id="estudos" class="estudos-publicacoes">
+<!-- 	<section id="estudos" class="estudos-publicacoes">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
@@ -258,7 +250,7 @@ get_template_part('common');
 				</div>
 			</div>
 		</div>
-	</section>	
+	</section>	 -->
 
 	<section id="newsletter" class="desktop">
 		<div class="container">

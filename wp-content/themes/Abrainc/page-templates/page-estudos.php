@@ -1,3 +1,18 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION['usuario_log'])){
+		header('Location: /estudos-login/');
+		session_destroy();
+	}
+
+	if(isset($_GET['deslogar'])){
+		session_destroy();
+		header('Location: /estudos-login/');
+	}
+
+?>
+
 <?php 
 	
 	/* Template Name: Estudos */
@@ -22,6 +37,12 @@ get_template_part('common');
 		</div>
 
 		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<a class="deslogar" href="?deslogar">sair</a>
+				</div>
+			</div>
+			
 			<div class="row">
 				<div class="col-md-6 content-indicadores">
 					<?php the_content(); ?>

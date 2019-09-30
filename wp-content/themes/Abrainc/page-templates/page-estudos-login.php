@@ -2,7 +2,7 @@
 	session_start();
 
 	if (isset($_SESSION['usuario_log'])) {
-		header('Location: /indicadores-publicacoes/');
+		header('Location: /estudos/');
 		die();
 	}
 
@@ -19,50 +19,44 @@
 
 		if ($teste){
 			$_SESSION['usuario_log'] = true;
-			header('Location: /indicadores-publicacoes/');
+			header('Location: /estudos/');
 		}else {
 			echo '<script type="text/javascript">alert("Usuário ou senha inválidos");</script>';
 		}
 	}
 ?>
 
-
 <?php 
 	
-	/* Template Name: Indicadores Publicações Login */
+	/* Template Name: Estudos Login */
 	
 get_header();
 get_template_part('common');
 
 ?>
-	<section class="publicacoes">
+
+	<section class="noticias artigos indicadores eventos estudos">
+		<div class="bg-indicadores" style="background-image: url('<?php the_field('imagem'); ?>');">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>
+							Estudos e Guias
+							<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page-white-peq.png">
+						</h1>
+					</div>
+				</div>	
+			</div>	
+		</div>
+
 		<div class="container">
-			
 			<div class="row">
-				<div class="col-md-12">
-					<h1>
-						Indicadores
-						<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page.png">
-					</h1>
+				<div class="col-md-6 content-indicadores">
+					<?php the_content(); ?>
 				</div>
 			</div>
-
-			<div class="row menu-publicacoes desktop">
-				<div class="col-md-6 col-md-offset-3">
-					<a href="/indicadores/">
-						Indicador Mensal
-					</a>
-					<a href="/indicador-antecedente-do-mercado-imobiliario/">
-						IAMI
-					</a>
-					<a href="/radar/">
-						Radar Trimestral
-					</a>
-																				
-				</div>	
-			</div>
 		</div>
-	</section>	
+	</section>
 
 	<section>
 		<div class="container">
@@ -127,7 +121,6 @@ get_template_part('common');
 			</div>
 		</div>
 	</section>
-
 <?php
 
 get_footer();
