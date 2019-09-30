@@ -15,7 +15,7 @@
 	$data = date("d-m-Y");
 
 	$sql ="INSERT INTO wp_cadastro VALUES ";
-	$sql .= "(NULL, '$name', '$email', '$telefone', '$usuario', '$senha');";
+	$sql .= "(NULL, '$name', '$email', '$telefone', '$usuario', '$senha', '$profissao');";
 
 	mysqli_query($conexao,$sql);
 

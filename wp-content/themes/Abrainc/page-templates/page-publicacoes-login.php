@@ -112,6 +112,11 @@ get_template_part('common');
 									<input type="password" name="senha" id="senha_cadastro" class="input-form">
 								</div>
 
+								<div class="cel">
+									<label for="senha">Profissão *</label><br/>
+									<input type="text" name="profissao" id="profissao_cadastro" class="input-form">
+								</div>
+
 								<input type="button" name="enviar" id="envia_email" class="bt_azul" value="enviar" onclick="EnviaCadastro('cadastro');">
 						</form>
 						<div id="sucesso-cadastro">
