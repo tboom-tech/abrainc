@@ -68,6 +68,11 @@ get_template_part('common');
 		<div class="container">
 			<div class="formulario">
 				<div class="row">
+					<div class="col-md-12">
+						<p class="intro">Para ter acesso, preencha os seus dados no formulário de cadastro;</p>
+						<p class="intro">
+						Após o primeiro cadastro, você terá acesso aos Indicadores, inserindo login e senha no formulário abaixo:</p>
+					</div>
 					<div class="col-md-6">
 						<form id="form_login" action="" method="POST">
 							<p>Login</p>

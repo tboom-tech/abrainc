@@ -2627,6 +2627,14 @@ a.deslogar{
 	float: right;
 	margin-top: 10px;
 }
+.formulario .col-md-12 {
+	padding: 40px 0;
+}
+.formulario p.intro{
+	text-align: center;
+	font-size: 17px;
+	font-weight: 700;
+}
 
 @media (max-width: 1024px) {
 	.mobile{
