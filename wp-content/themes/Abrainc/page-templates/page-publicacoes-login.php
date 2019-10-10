@@ -15,7 +15,7 @@
 		$usuario = mysqli_escape_string($conn, $_POST['usuario']);
 		$senha = mysqli_escape_string($conn, $_POST['senha']);
 
-		$teste = DBQuery('wp_cadastro', "WHERE Usuário = '$usuario' AND senha = '$senha'");
+		$teste = DBQuery('wp_cadastro', "WHERE usuario = '$usuario' AND senha = '$senha'");
 
 		if ($teste){
 			$_SESSION['usuario_log'] = true;
@@ -128,8 +128,23 @@ get_template_part('common');
 							<div class="msg-sucesso">
 								<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/close.png" class="fechar">
 								
-								<p class="icone-whats">Formulário enviado com sucesso.</p>
-								<p class="breve">Em breve retornaremos o contato.</p>
+								<p class="icone-whats">Cadastro Concluído com sucesso.</p>
+
+								<form id="form_login" action="" method="POST">
+									<p>Login</p>
+										<div class="agenda-nome">
+											<label for="name">Usuário *</label><br/>
+											<input type="text" name="usuario" id="nome_login" required />
+										</div>
+										<div class="agenda-email">	
+											<label for="email">Senha *</label><br/>
+											<input type="password" name="senha" id="email_login" required />
+										</div>
+										<div class="agenda-email">	
+											<label for="email"><a href="/recuperar-senha/">Esqueci minha senha</a></label><br/>
+										</div>
+										<input type="submit" name="entrar" value="Entrar" class="bt_azul">
+								</form>
 							</div>
 						</div>
 					</div>
