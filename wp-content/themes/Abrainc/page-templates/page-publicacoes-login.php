@@ -15,7 +15,7 @@
 		$usuario = mysqli_escape_string($conn, $_POST['usuario']);
 		$senha = mysqli_escape_string($conn, $_POST['senha']);
 
-		$teste = DBQuery('wp_cadastro', "WHERE usuario = '$usuario' AND senha = '$senha'");
+		$teste = DBQuery('wp_cadastro', "WHERE Usuário = '$usuario' AND Senha = '$senha'");
 
 		if ($teste){
 			$_SESSION['usuario_log'] = true;

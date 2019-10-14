@@ -8,30 +8,33 @@
 	$conn = DBConect();
 	$email = $_POST['email'];
 
-	$teste = DBQuery('wp_cadastro', "WHERE email = '$email' limit 1");
+	$teste = DBQuery('wp_cadastro', "WHERE Email = '$email' limit 1");
 
 	if ($teste) {
 
 		foreach ($teste as $fields) {
-			$senha = $fields['senha'];
+			$usuario = $fields['Usuário'];
+			$senha = $fields['Senha'];
 		}
 
 		// $senha = DBQuery('wp_cadastro', "WHERE senha = '$senha'");	
 
-		$html = 'Sua senha é: ' .$senha;
+		$html = 'Seu usuário é: ' .$usuario;
+		$html .= '<br />Sua senha é: ' .$senha;
 
 		$mailer = new PHPMailer();
 		$mailer->IsSMTP();
 		$mailer->SMTPDebug = 1;
 		$mailer->Port = 587;
-		$mailer->Host = 'mail.exchangecorp.com.br';
+		$mailer->Host = 'email-ssl.com.br';
 		$mailer->SMTPAuth = true;
-		$mailer->Username = 'alexandre.yokota@tboom.net';
-		$mailer->Password = '123@mergulhe';
-		$mailer->setFrom('alexandre.yokota@tboom.net', 'Alexandre Yokota');
+		$mailer->Username = 'abrainc@domesmolado.com.br';
+		$mailer->Password = '123@Abrainc!';
+		$mailer->setFrom('abrainc@domesmolado.com.br', 'Abrainc');
 		$mailer->addAddress($email);
-		$mailer->Subject = 'Recuperação de senha';
+		$mailer->Subject = 'Recuperação de senha.';
 		$mailer->CharSet = 'UTF-8';
+		$mailer->Priority   = 1;     
 		$mailer->Body = $html;
 		$mailer->IsHTML(true); 	
 
@@ -43,5 +46,4 @@
 	}else{
 		echo 'não encontrado';
 	}	
-	
 ?>
