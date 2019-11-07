@@ -75,6 +75,7 @@ $DiasMes = array('01' => '31',
 
 								<select id="ano" name="ano" required>
 									<option value="">Ano</option>
+									<option value="2020">2020</option>
 									<option value="2019">2019</option>
 									<option value="2018">2018</option>
 									<option value="2017">2017</option>
@@ -91,6 +92,11 @@ $DiasMes = array('01' => '31',
 		</div>
 
 		<?php 
+			$data_evento = $_GET['ano'];
+		?>
+
+
+		<?php 
 			if ($_GET['ano'] || $_GET['mes']) {
 				$ano = $_GET['ano'];
 				$mes = $_GET['mes'];				
@@ -98,8 +104,7 @@ $DiasMes = array('01' => '31',
 				$data_fim = $ano.$mes.$DiasMes[$mes];
 			}else{
 				$ano = date('Y');
-				// $mes = date('m');
-				$mes = 12;
+				$mes = date('m');
 				// $data_inicio = $ano.$mes.'01';
 				$data_inicio = '20000101';
 				$data_fim = $ano.$mes.$DiasMes[$mes];
@@ -173,9 +178,9 @@ $DiasMes = array('01' => '31',
 					              'meta_query'=> array(
 					              		array(
 						                    'key' => 'data_evento',
-						                    'value' => array($data_inicio, $data_fim),
-						                    'compare' => 'BETWEEN',
-						                    'type' => 'DATE',
+						                   	'value' => $data_evento,
+						                    'compare' => 'LIKE',
+						                    'type' => 'numeric',
 						                )    
 					                )					              
 					            ));
