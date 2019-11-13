@@ -30,6 +30,7 @@ $DiasMes = array('01' => '31',
 				'10' => '31',
 				'11' => '30',
 				'12' => '31');
+
 ?>
 
 	<section class="noticias artigos indicadores eventos">
@@ -90,24 +91,19 @@ $DiasMes = array('01' => '31',
 				</div>
 			</div>
 		</div>
-
-		<?php 
+		<?php
 			$data_evento = $_GET['ano'];
+			$data_atual = date('d-m-Y');
 		?>
-
-
 		<?php 
 			if ($_GET['ano'] || $_GET['mes']) {
 				$ano = $_GET['ano'];
-				$mes = $_GET['mes'];				
-				$data_inicio = $ano.$mes.'01';
-				$data_fim = $ano.$mes.$DiasMes[$mes];
+				$mes = $_GET['mes'];
+				$data_atual = $ano.'-'.$mes.'-01';
+				$data_fim = $ano.'-'.$mes.'-'.$DiasMes[$mes];
 			}else{
-				$ano = date('Y');
-				$mes = date('m');
-				// $data_inicio = $ano.$mes.'01';
-				$data_inicio = '20000101';
-				$data_fim = $ano.$mes.$DiasMes[$mes];
+				$data_atual = date('Y-m-d');
+				$data_fim = date('Y-m-d',strtotime(date("Y-m-d", mktime()) . " + 730 day"));
 			}
 
 			$mes_anterior = $mes-1;
@@ -170,30 +166,37 @@ $DiasMes = array('01' => '31',
 						$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
 					  	$noticias = new WP_Query(array('post_type' => 'evento',
-								  'order'     => 'ASC',
-								  'meta_key' => 'data_evento',
-								  'orderby'   => 'meta_value',
-					              'posts_per_page' => 16,
-					              'paged' => $paged,
-					              'meta_query'=> array(
-					              		array(
-						                    'key' => 'data_evento',
-						                   	'value' => $data_evento,
-						                    'compare' => 'LIKE',
-						                    'type' => 'numeric',
-						                )    
+								  'order'          => 'ASC',
+					              'posts_per_page' => -1,
+					              'paged'          => $paged,
+					              'orderby'        => 'data_evento',
+					              'meta_query'     => array(
+				              		'relation'     => 'AND',
+				              		array(
+					                    'key'      => 'data_evento',
+					                    'value'    => $data_atual,
+					                    'compare'  => '>=',
+					                    'type'     => 'DATE',
+					                	),
+				              		array(
+			              				'key'      => 'data_evento',
+					                    'value'    => $data_fim,
+					                    'compare'  => '<=',
+					                    'type'     => 'DATE'
+				              			)
 					                )					              
 					            ));
 					      	while ($noticias->have_posts()) : $noticias->the_post();
-					      	$title = explode("/", get_field('data_evento'));
+					      	$title = explode("-", get_field('data_evento'));
 					?>
 					<?php if (get_field('data_evento')) { ?>
 					<div class="post-indicador col-md-3">
 						<div class="content-post-indicador">
 					    	<a href="<?php the_permalink(); ?>">
 								<p class="dia">
-									<?php echo $title[0]; ?>
-									<span><?php echo $NameMes[$title[1]]; ?> de <?php echo $title[2]; ?></span>
+									<?php echo $title[2]; ?>
+
+									<span><?php echo $NameMes[$title[1]]; ?> de <?php echo $title[0]; ?></span>
 								</p>
 								<p class="title_event"><?php the_title(); ?></p>
 								<p class="description_event"><?php the_field('descricao_evento'); ?></p>

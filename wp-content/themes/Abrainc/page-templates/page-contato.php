@@ -22,6 +22,18 @@ get_template_part('common');
 
 		<div class="container">
 			<div class="row">
+				<div class="col-md-8 content-indicadores">
+					<p class="desc_associe">Fortaleça o setor e contribuia para <br />o desenvolvimento sustentável<br />do país e de suas cidades.</p>
+					<div class="bt-associe">
+						<a data-toggle="modal" href="#associe-se">
+							Associe-se
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-4 text-right logo-sobre">
+					
+				</div>
 				<div class="col-md-6 content-indicadores">
 					<p class="telefone">+55 11 <span>2737-1400</span></p>
 					<p class="email">abrainc@abrainc.org.br</p>
@@ -68,12 +80,12 @@ get_template_part('common');
 				<div class="col-md-6">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.6029186466712!2d-46.685317985619285!3d-23.582700684672265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5769b6478abf%3A0x682e43d4262cf172!2sR.+Iguatemi%2C+448+-+14%C2%BA+Andar+%E2%80%93+Cj.+1402+-+Itaim+Bibi%2C+S%C3%A3o+Paulo+-+SP%2C+01453-100%2C+Brasil!5e0!3m2!1spt-BR!2sit!4v1542602110821" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-					<p class="desc_associe">Fortaleça o setor e contribuia para <br />o desenvolvimento sustentável<br />do país e de suas cidades.</p>
+					<!-- <p class="desc_associe">Fortaleça o setor e contribuia para <br />o desenvolvimento sustentável<br />do país e de suas cidades.</p>
 					<div class="bt-associe">
 						<a data-toggle="modal" href="#associe-se">
 							Associe-se
 						</a>
-					</div>
+					</div> -->
 				</div>				
 			</div>
 		</div>

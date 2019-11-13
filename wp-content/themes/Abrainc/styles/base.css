@@ -2368,7 +2368,7 @@ span.wpcf7-not-valid-tip{
 p.desc_associe{
     display: inline-block;
     text-align: right;
-    width: 63%;
+    width: 36%;
     line-height: 17px;
     padding-top: 8px;
     color: #7b7878;
@@ -2423,7 +2423,8 @@ p.desc_associe{
 	text-align: center;
 }
 
-#associe-se input{
+#associe-se input,
+#associe-se textarea{
     color: #bdd8f9;
     font-size: 14px;
     border: none;
@@ -2433,8 +2434,23 @@ p.desc_associe{
     margin-bottom: 10px;
     font-weight: 500;
 }
+#associe-se textarea{
+	resize: none;
+}
+#associe-se select{
+    color: #bdd8f9;
+    font-size: 14px;
+    border: none;
+    background: #246fcc;
+    border-bottom: 1px solid #bdd8f9;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    width: 298px;
+}
 
-#associe-se input::placeholder{
+#associe-se input::placeholder,
+#associe-se textarea::placeholder{
     color: #bdd8f9;
     font-size: 14px;
 	font-weight: 500;    
@@ -2463,6 +2479,18 @@ p.desc_associe{
     text-transform: uppercase;
     float: right;
     margin-top: -70px;
+}
+.associe-topo{
+    background: #246ecb;
+    color: #FFF;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    height: auto;
+    position: absolute;
+    text-transform: uppercase;
+    margin-top: 40px;
 }
 
 #form iframe{

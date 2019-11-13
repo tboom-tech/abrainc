@@ -22,6 +22,20 @@ get_template_part('common');
 
 		<div class="container">
 			<div class="row">
+				<div class="col-md-6">
+					<a class="associe-topo" data-toggle="modal" href="#associe-se">
+						Associe-se
+					</a>
+				</div>
+
+				<div class="col-md-6 text-right logo-sobre desktop">
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
 				<div class="col-md-6 content-indicadores">
 					<?php the_content(); ?>
 				</div>
@@ -40,7 +54,7 @@ get_template_part('common');
 					<h4>Gestão</h4>
 				</div>
 				<div class="col-md-12 text-center">
-					<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/Conselho.jpg">
+					<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/conselho_v2.jpg">
 				</div>
 				<div id="comites" class="col-md-12 text-center">
 					<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/Comites.jpg">
