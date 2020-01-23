@@ -50,16 +50,6 @@ get_template_part('common');
 				</div>
 
 				<div class="col-md-6">
-					<?php
-					    $loop = new WP_Query(array('post_type' => 'compilacao', 
-			                  'orderby' => 'post_date',
-			                  'order' => 'DESC',
-			                  'posts_per_page' => 1
-			              	));
-					        while ($loop->have_posts()) : $loop->the_post(); 
-					?>	
-						<a href="<?php the_field('arquivo_compilacao'); ?>" target="_blank" class="bt-more compilacao">COMPILAÇÃO DE DADOS<br />ABRAINC/FIPE</a>
-					<?php endwhile; ?>
 					
 					<form role="search" method="get" id="advanced-searchform" class="advanced-searchform" name="advanced-searchform" action="/indicadores/">
 						<div class="row">

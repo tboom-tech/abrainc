@@ -52,6 +52,21 @@ get_template_part('common');
 					<a class="deslogar" href="?deslogar">sair</a>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<?php
+					    $loop = new WP_Query(array('post_type' => 'compilacao', 
+			                  'orderby' => 'post_date',
+			                  'order' => 'DESC',
+			                  'posts_per_page' => 1
+			              	));
+					        while ($loop->have_posts()) : $loop->the_post(); 
+					?>	
+						<a href="<?php the_field('arquivo_compilacao'); ?>" target="_blank" class="bt-more compilacao">Download da <br />Série Histórica</a>
+					<?php endwhile; ?>
+				</div>
+			</div>
 		</div>
 	</section>	
 
