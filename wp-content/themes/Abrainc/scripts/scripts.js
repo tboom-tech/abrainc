@@ -26,6 +26,8 @@ $(document).ready(function() {
     $('#telefone_cadastro').mask('(00) 0000-00000');
 });
 
+
+
 //Função para checar se campo e-mail está correto
 function checkMail(mail){
     var er = new RegExp(/^[A-Za-z0-9_\-\.]+@[A-Za-z0-9_\-\.]{2,}\.[A-Za-z0-9]{2,}(\.[A-Za-z0-9])?/);
@@ -88,6 +90,15 @@ function EnviaCadastro(local) {
         $('#senha_'+local).removeClass('error-form');
     }
 
+    if($('#profissao_'+local).val()==""){
+        $('#profissao_'+local).addClass('error-form');
+        $('#profissao_'+local).removeClass('valide-form');
+        errors++;
+    } else {
+        $('#profissao_'+local).addClass('valide-form');
+        $('#profissao_'+local).removeClass('error-form');
+    }
+
   if (errors == 0) {
           var dados = $('#form_'+local).serialize();
 
@@ -116,6 +127,7 @@ function EnviaCadastro(local) {
                 $('#form_'+local+' input').val('');
                 $('#form_'+local+' input').removeClass('valide-form');
 
+                window.location.href = "/indicadores-publicacoes/";
               }
           });
       } 
@@ -190,3 +202,47 @@ function readCookie(name) {
   return null;
 }
 
+/* palestrantes */
+function AbreModalPalestras(id_modal) {
+    $('#palestrantes-'+id_modal).fadeIn('300');
+};
+
+
+$(function(){
+    $('.fechar').click(function(){
+        $('.palestras').fadeOut('300');
+    })
+});
+
+$(window).scroll(function() { 
+    var scroll = $(window).scrollTop();
+
+        if (scroll > 450) {
+            $('.btn-inscricao').css('opacity', '1');
+        }else{
+            $('.btn-inscricao').css('opacity', '0');
+        }
+});
+
+function checarScroll() {
+    var margem = 10;
+    var posicao = $(document).scrollTop() + window.innerHeight;
+    var footertop = $('.footer').offset().top;            
+    var meiodapagina = window.innerHeight / 10;            
+    var maximo = footertop + meiodapagina - margem;
+
+    if (posicao < maximo) {
+        $('#fixed').css('bottom', meiodapagina + 'px');
+    } else {                
+        $('#fixed').css('bottom', (margem + (posicao - footertop)) + 'px');
+    }
+}
+$(document).ready(checarScroll);
+$(document).scroll(checarScroll);
+
+$(function () {
+    $('.btn-inscricao').click(function () {
+        $("html, body").animate({scrollTop: $('#inscricao').position().top+250}, 1000);
+        
+    })
+})
