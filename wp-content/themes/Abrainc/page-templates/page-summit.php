@@ -94,6 +94,9 @@ get_template_part('common');
 							</div>
 						</div>
 					<?php } ?>
+					<div class="col-md-12">
+						<p class="alteracao"><i>*Palestrantes sujeito a alteração</i></p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -104,6 +107,22 @@ get_template_part('common');
 			<div class="row">
 				<div class="col-md-12">
 					<h2><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/microfone.png"> <span>Programação</span> <img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-palestra.png"></h2>
+					<div class="col-md-12 bg-branco">
+						<div class="col-md-4">
+							<p class="abertura"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/data.png"> 08h às 09h </p>
+						</div>
+						<div class="col-md-8 left">
+							<p>Credenciamento</p>
+						</div>
+					</div>
+					<div class="col-md-12 bg-branco">
+						<div class="col-md-4">
+							<p class="abertura"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/data.png"> 08h às 09h</p>
+						</div>
+						<div class="col-md-8 left">
+							<p>Café de boas-vindas</p>
+						</div>
+					</div>
 					<div class="col-md-12 bg-branco">
 						<div class="col-md-4">
 							<p class="abertura"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/data.png"> <?php the_field('abertura'); ?></p>
@@ -128,6 +147,15 @@ get_template_part('common');
 
 					<div class="col-md-12 bg-branco">
 						<div class="col-md-4">
+							<p class="abertura"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/data.png"> 09h40 às 10h</p>
+						</div>
+						<div class="col-md-8 left">
+							<p>Keynote Speaker</p>
+						</div>
+					</div>
+
+					<div class="col-md-12 bg-branco">
+						<div class="col-md-4">
 							<p class="abertura"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/data.png"> <?php the_field('mesa'); ?></p>
 						</div>
 						<div class="col-md-8 left">
@@ -140,8 +168,8 @@ get_template_part('common');
 						</div>
 				
 					<div class="col-md-8 pale">
-						<!-- <p class="nome"><?php the_field('nome_mod'); ?></p>
-						<p class="cargo_m"><span>Moderador: </span><?php the_field('moderador'); ?></p> -->
+						<!-- <p class="nome"><?php the_field('nome_mod'); ?></p> -->
+						<p class="cargo_m"><span>Moderador: </span><?php the_field('moderador'); ?></p>
 					</div>
 					<?php
 						$repeater = get_field('n_mesa');
@@ -163,6 +191,23 @@ get_template_part('common');
 						<div class="col-md-8 pale debate">
 							
 						</div>
+					<div class="col-md-12 bg-branco">
+						<div class="col-md-4">
+							<p class="abertura"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/data.png"> 11h10 às 11h30</p>
+						</div>
+						<div class="col-md-8 left">
+							<p>Café de Relacionamento</p>
+						</div>
+					</div>
+
+					<div class="col-md-12 bg-branco">
+						<div class="col-md-4">
+							<p class="abertura"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/data.png"> 11h30 às 11h40</p>
+						</div>
+						<div class="col-md-8 left">
+							<p>Apresentação dos Ativos Correios</p>
+						</div>
+					</div>
 
 					<div class="col-md-12 bg-branco">
 						<div class="col-md-4">
@@ -171,6 +216,15 @@ get_template_part('common');
 						<div class="col-md-8 left">
 							<p><?php the_field('fim'); ?></p>
 						</div>
+
+					</div>
+					<div class="col-md-4">
+							
+						</div>
+				
+					<div class="col-md-8 pale">
+						<!-- <p class="nome"><?php the_field('nome_mod'); ?></p> -->
+						<p class="cargo_m"><span>Moderador: </span><?php the_field('moderador_2'); ?></p>
 					</div>
 					<?php
 						$repeater = get_field('n_fim');
@@ -185,6 +239,15 @@ get_template_part('common');
 							<p class="cargo"><?php echo $row['cargo']; ?></p>	
 						</div>
 					<?php } ?>
+
+					<div class="col-md-12 bg-branco">
+						<div class="col-md-4">
+							<p class="abertura"><img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/data.png"> 13h</p>
+						</div>
+						<div class="col-md-8 left">
+							<p>Encerramento</p>
+						</div>
+					</div>
 
 					<div class="col-md-12">
 						<p class="alteracao"><i>*Programação sujeita a alteração</i></p>
@@ -208,7 +271,9 @@ get_template_part('common');
 						foreach($repeater as $id_modal => $row) {
 					?>
 						<div class="col-md-6">
-							<img src="<?php echo $row['images']; ?>">
+							<a href="<?php echo $row['link']; ?>" target="_blank">
+								<img src="<?php echo $row['images']; ?>">
+							</a>
 						</div>
 					<?php } ?>
 				</div>
@@ -258,6 +323,10 @@ get_template_part('common');
 					<a class="button-small-text btn" href="https://www.sympla.com.br/abrainc-summit----novo-ciclo-da--incorporacao__746605" target="_blank">
 						Realizar inscrição
 					</a>
+				</div>
+				<div class="col-md-12">
+					<h2>Ficou alguma dúvida?</h2>
+					<a href="/institucional/fale-conosco/" class="btn_fale">Fale Conosco <i class="fa fa-arrow-right"></i></a>
 				</div>
 			</div>
 		</div>

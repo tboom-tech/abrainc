@@ -2759,7 +2759,7 @@ a.deslogar{
 	color: #9fbf42;
 	font-family: 'montserratregular';
 	font-size: 19px;
-	padding: 0 30px;
+	padding: 0 60px 0 30px;
     text-align: left;
 }
 .event .palestrantes p.cv{
@@ -2781,6 +2781,12 @@ a.deslogar{
 	position: relative;
 	z-index: 9999;
 	margin-bottom: 20px;
+}
+.event .palestrantes p.alteracao {
+	font-family: 'montserratbold';
+	color: #1f3a5d;
+	font-size: 16px;
+	margin-top: 50px;
 }
 .bg-borda{
 	width: 277px;
@@ -2981,6 +2987,26 @@ a.deslogar{
     margin: 0 auto;
     border-radius: 30px;
 
+}
+.event .inscreva a.btn_fale,
+.event .inscreva a.btn_fale:hover{
+	text-decoration: none;
+    background-color: #9fbf42;
+    color: #FFF;
+    font-family: 'montserratregular';
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 30px;
+
+}
+.event .inscreva i {
+    font-size: 12px;
+    padding-left: 5px;
 }
 .btn-inscricao{
 	position: fixed;
