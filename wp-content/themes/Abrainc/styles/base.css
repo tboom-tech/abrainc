@@ -3705,6 +3705,13 @@ a.deslogar{
 	#vemmorar .vemmorar p.apoio img{
 		margin: 0 5px;
 	}
+	#vemmorar .vemmorar p{
+		padding-top: 17px;
+		font-size: 11px;
+	}
+	#vemmorar .vemmorar p span{
+		font-size: 16px;
+	}
 	#vemmorar .vemmorar{
 		background: url(../img/bg-vemmorar-mobile-320.jpg) no-repeat center 0;
 		height: 620px;
