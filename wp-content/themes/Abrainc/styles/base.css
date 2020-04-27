@@ -68,6 +68,51 @@ body {
 
 }
 
+@font-face {
+    font-family: 'museo300';
+    src: url('../fonts/museo300-regular-webfont.eot');
+    src: url('../fonts/museo300-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo300-regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo300-regular-webfont.woff') format('woff'),
+         url('../fonts/museo300-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo300-regular-webfont.svg#museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo700';
+    src: url('../fonts/museo700-regular-webfont.eot');
+    src: url('../fonts/museo700-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo700-regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo700-regular-webfont.woff') format('woff'),
+         url('../fonts/museo700-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo700-regular-webfont.svg#museo700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo900';
+    src: url('../fonts/museo900-regular-webfont.eot');
+    src: url('../fonts/museo900-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo900-regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo900-regular-webfont.woff') format('woff'),
+         url('../fonts/museo900-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo900-regular-webfont.svg#museo900') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 b, strong {
 	font-weight: 400!important;
 }
@@ -3040,6 +3085,89 @@ a.deslogar{
 .event .compartilhar {
 	margin-top: 20px;
 }
+#vemmorar{
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	z-index: 99999999;
+}
+#vemmorar .fechar{
+	display: block;
+	margin: 0 auto;
+}
+#vemmorar .vemmorar{
+	width: 600px;
+	margin: 0 auto;
+	background: url(../img/bg-vemmorar.jpg) no-repeat center 0;
+	height: 550px;
+	background-size: contain;
+}
+#vemmorar .vemmorar p{
+	font-size: 15px;
+	font-family: 'museo700';
+	color: #FFF;
+	text-transform: uppercase;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 17px;
+	padding-top: 30px;
+	letter-spacing: 1px;
+}
+#vemmorar .vemmorar p span{
+	font-size: 22px;	
+}
+#vemmorar .vemmorar p.convidamos{
+	font-size: 18px;
+	font-family: 'museo300';
+	color: #FFF;
+	text-transform: inherit;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 17px;
+	padding-top: 215px;
+	letter-spacing: 1px;
+}
+#vemmorar .vemmorar p.saiba{
+	font-size: 16px;
+	font-family: 'museo300';
+	color: #FFF;
+	text-transform: inherit;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 17px;
+	letter-spacing: 1px;
+	border: 1px solid #f9e083;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 25px;
+}
+#vemmorar .vemmorar p.apoio{
+	font-size: 14px;
+	font-family: 'museo300';
+	color: #FFF;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 17px;
+	letter-spacing: 1px;
+	margin-top: 25px;
+	padding: 0;
+}
+#vemmorar .vemmorar p.apoio img{
+	display: inline-block;
+	margin: 0 10px;
+}
+#vemmorar .vemmorar p.saiba a{
+	color: #f9e083;
+	text-decoration: none;
+}
 @media screen and (min-width: 1601px) and (max-width: 2048px){
 	.event .bg-indicadores {
     	padding: 230px 0;
@@ -3402,6 +3530,11 @@ a.deslogar{
 		right: 55px;
 	}
 }
+@media screen and (max-width: 823px){
+	#vemmorar{
+		overflow: scroll;
+	}
+}
 @media screen and (max-width: 768px){
 	.event .palestrantes .curriculo{
 		text-align: center;
@@ -3497,6 +3630,28 @@ a.deslogar{
 		right: 8px;
 		z-index: 9999;
 	}
+	#vemmorar .vemmorar{
+		width: 100%;
+	}
+	#vemmorar .vemmorar p,
+	#vemmorar .vemmorar p.convidamos,
+	#vemmorar .vemmorar p.saiba,
+	#vemmorar .vemmorar p.apoio{
+		width: 90%;
+	}
+	#vemmorar .vemmorar{
+		background: url(../img/bg-vemmorar-mobile.jpg) no-repeat center 0;
+		height: 620px;
+	}
+	#vemmorar .vemmorar p.convidamos{
+		font-size: 20px;
+		line-height: 20px;
+	}
+	#vemmorar .vemmorar p.saiba,
+	#vemmorar .vemmorar p.apoio{
+		margin-top: 35px;
+	}
+
 }
 @media screen and (max-width: 375px){
 	.event .bg-indicadores-mobile {
@@ -3505,6 +3660,15 @@ a.deslogar{
 	.event .apoiadores .col-md-2 {
 	    width: 48.5%;
 	    text-align: center;
+	}
+	#vemmorar .vemmorar p{
+		font-size: 13px;
+	}
+	#vemmorar .vemmorar p span{
+		font-size: 18px;
+	}
+	#vemmorar .vemmorar p.convidamos{
+		padding-top: 175px;
 	}
 }
 @media screen and (max-width: 360px){
@@ -3522,6 +3686,10 @@ a.deslogar{
 	.event .bg-indicadores-mobile{
 		padding: 270px 0 16px;
 	}
+	#vemmorar .vemmorar p.convidamos {
+	    font-size: 17px;
+	    line-height: 17px;
+	}
 }
 @media screen and (max-width: 320px){
 	.event .programacao p.abertura, 
@@ -3533,5 +3701,12 @@ a.deslogar{
 	}
 	.event .bg-indicadores-mobile{
 		padding: 240px 0 16px;
+	}
+	#vemmorar .vemmorar p.apoio img{
+		margin: 0 5px;
+	}
+	#vemmorar .vemmorar{
+		background: url(../img/bg-vemmorar-mobile-320.jpg) no-repeat center 0;
+		height: 620px;
 	}
 }

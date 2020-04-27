@@ -5,7 +5,16 @@
 require( get_template_directory() . '/common.php' );
 
 get_header(); ?>
-
+	
+	<div id="vemmorar">
+		<img class="fechar" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/fechar.png">
+		<div class="vemmorar">
+			<p>Incorporadoras e construtoras juntas pelos <span>sonhos</span> dos brasileiros</p>
+			<p class="convidamos">Convidamos nossas associadas a participarem dessa iniciativa destinada a movimentar o setor, gerar renda e manter empregos. Essa ação conjunta será vetor para construirmos a base para uma retomada mais rápida e robusta após a reversão da pandemia.</p>
+			<p class="saiba">Saiba mais em: <a href="https://bit.ly/VemMorar" target="_blank">https://bit.ly/VemMorar</a></p>
+			<p class="apoio">APOIO : <img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/logo-caixa.png"> <img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/logo-abrainc-pop.png"></p>
+		</div>
+	</div>
 	<section id="banner-top" class="desktop">
 		<div class="container">
 			<div class="row">
@@ -65,14 +74,14 @@ get_header(); ?>
 
 					      	</div>
 				      	</a>
-<!-- 
-				      	<div class="modal-live">
+
+				      	<!-- <div class="modal-live">
 				      		<img class="fechar" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/fechar.png">
 				      		<div class="live">
 
 				      			<iframe id="live" width="852" height="480" src="https://www.youtube.com/embed/1dgXVHiucZo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				      		</div>
-				      	</div> -->
+				      	</div>  -->
 			      	<?php endwhile; wp_reset_postdata(); ?>					
 				</div>
 				<div class="col-md-4">
@@ -367,4 +376,25 @@ get_header(); ?>
         contain: true,
         cellAlign: 'center'
     });	 
+</script>
+
+<script>
+	document.addEventListener('wpcf7mailsent', function(event) {
+	 	window.dataLayer.push({
+			 'event': 'gaTriggerEvent',
+			 'gaEventCategory': 'conversao',
+			 'gaEventAction': 'newsletter',
+			 'gaEventLabel': 'email',
+			 'formId' : event.detail.contactFormId,
+			 'response' : event.detail.inputs
+	 	})
+	}); 
+</script>
+
+<script>
+	document.addEventListener( 'wpcf7mailsent', function( event ) { 
+			dataLayer.push({ 
+				"event" : "cf7submission", 
+				"formId" : event.detail.contactFormId, 
+				"response" : event.detail.inputs })}); 
 </script>

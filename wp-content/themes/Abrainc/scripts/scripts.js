@@ -20,6 +20,7 @@ $('.fechar').click(function(){
 
 $('.fechar').click(function(){
 	$('#sucesso-cadastro').fadeOut('');
+  $('#vemmorar').fadeOut('');
 })
 
 $(document).ready(function() {    
