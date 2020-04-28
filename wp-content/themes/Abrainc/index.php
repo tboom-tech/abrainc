@@ -197,7 +197,7 @@ get_header(); ?>
 					<div class="col-md-10 col-md-offset-1 carousel">
 						<?php 
 							$loop = new WP_Query(array('post_type' => 'associadas',
-				                      'orderby' => 'post_date',
+				                      'orderby' => 'title',
 				                      'order' => 'ASC'
 				                    ));
 				              	while ($loop->have_posts()) : $loop->the_post();
