@@ -47,6 +47,7 @@ get_template_part('common');
 			                      'orderby' => 'post_date',
 			                      'order' => 'DESC',
 			                      'posts_per_page' => 17,
+			                      'paged' => $paged,
 								  'tax_query' => array(
 							        array(
 							            'taxonomy' => 'category',

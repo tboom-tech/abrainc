@@ -2611,20 +2611,24 @@ p.desc_associe{
 }
 
 /* Formulario Login */
-.formulario{
+.formulario,
+.formulario-relatorio{
 	width: 1000px;
 	margin: 0 auto;
 }
 #form_cadastro,
 #form_login,
-#form_senha {
+#form_senha,
+.formulario-relatorio #form_cadastro,
+.formulario-relatorio #form_login,
+.formulario-relatorio #form_senha {
     background: #ffffff;
     width: 310px;
     margin: 15px auto;
 }
 #form_cadastro p,
 #form_login p,
-#form_senha p {
+#form_senha p{
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -2632,14 +2636,31 @@ p.desc_associe{
     padding: 5px 20px;
     text-align: center;
 }
+.formulario-relatorio #form_cadastro p,
+.formulario-relatorio #form_login p,
+.formulario-relatorio #form_senha p {
+	font-family: 'Mermaid-Bold';
+	font-size: 30px;
+	text-align: left;
+	padding: 5px;
+}
 #form_cadastro label,
 #form_login label,
-#form_senha label{
+#form_senha label,
+.formulario-relatorio #form_cadastro label,
+.formulario-relatorio #form_login label,
+.formulario-relatorio #form_senha label{
     text-align: left;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     color: #58585a;
-    margin: 10px 0 0;
+    margin: 10px 10px 0 0px;
+}
+.formulario-relatorio .agenda-nome,
+.formulario-relatorio .agenda-email,
+.formulario-relatorio .cel {
+    text-align: left;
+    padding-bottom: 20px; 
 }
 .agenda-nome,
 .agenda-email,
@@ -2664,12 +2685,28 @@ p.desc_associe{
     padding: 15px;
     width: 300px;
 }
+.formulario-relatorio .agenda-nome input,
+.formulario-relatorio .cel input,
+.formulario-relatorio .agenda-email input {
+    height: 30px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #58585a;
+    background-color: #efefef; 
+    font-size: 14px;
+    padding: 15px;
+    width: 300px;
+}
 #form_cadastro input[type="button"].bt_azul,
 #form_cadastro input[type="submit"].bt_azul,
 #form_login input[type="button"].bt_azul,
 #form_login input[type="submit"].bt_azul,
 #form_senha input[type="button"].bt_azul,
-#form_senha input[type="submit"].bt_azul  {
+#form_senha input[type="submit"].bt_azul,
+.formulario-relatorio #form_cadastro input[type="button"].bt_azul,
+.formulario-relatorio #form_cadastro input[type="submit"].bt_azul,
+.formulario-relatorio #form_senha input[type="button"].bt_azul,
+.formulario-relatorio #form_senha input[type="submit"].bt_azul    {
     width: 300px;
     background: #143a60;
     font-size: 18px;
@@ -2678,6 +2715,19 @@ p.desc_associe{
     border-radius: 0;
     border: none;
     padding: 15px;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.formulario-relatorio #form_login input[type="button"].bt_azul,
+.formulario-relatorio #form_login input[type="submit"].bt_azul{
+	width: 150px;
+    background: #143a60;
+    font-size: 18px;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+    padding: 0px;
     margin-top: 20px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -2736,11 +2786,23 @@ a.deslogar{
 	float: right;
 	margin-top: 10px;
 }
+a.secao,
+a:hover.secao{
+	float: right;
+	margin-top: -70px;
+	text-decoration: underline;
+	font-size: 18px;
+}
 .formulario .col-md-12 {
 	padding: 40px 0;
 }
 .formulario p.intro{
 	text-align: center;
+	font-size: 17px;
+	font-weight: 700;
+}
+.formulario-relatorio p.intro{
+	text-align: left;
 	font-size: 17px;
 	font-weight: 700;
 }
@@ -3094,6 +3156,7 @@ a.deslogar{
 	background: rgba(0,0,0,0.5);
 	position: fixed;
 	z-index: 99999999;
+	display: none;
 }
 #vemmorar .fechar{
 	display: block;
@@ -3167,6 +3230,35 @@ a.deslogar{
 #vemmorar .vemmorar p.saiba a{
 	color: #f9e083;
 	text-decoration: none;
+}
+.indicadores h1.relatorio{
+	color: #000000;
+	font-size: 65px;
+}
+.indicadores h1.relatorio span{
+	color: #143a60;
+	font-size: 55px;
+}
+.indicadores .img-relatorio .float-right{
+	margin-top: 130px;
+}
+.page-template-page-relatorio-analitico .indicadores .img-relatorio .float-right,
+.page-template-page-relatorio-analitico-s2 .indicadores .img-relatorio .float-right{
+	margin-top: 60px;
+}
+.indicadores .baixar{
+	background: #246ecb;
+    color: #FFF;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    height: auto;
+    text-transform: uppercase;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 70px;
 }
 @media screen and (min-width: 1601px) and (max-width: 2048px){
 	.event .bg-indicadores {
@@ -3323,6 +3415,13 @@ a.deslogar{
 	.associadas h2{
 		font-size: 70px;
 		text-align: center;
+	}
+
+	.indicadores h1.relatorio{
+		text-align: left;
+	}
+	.indicadores .img-relatorio .float-right{
+		width: 100%;
 	}
 
 	.associadas h1 img,
@@ -3529,10 +3628,23 @@ a.deslogar{
 	.btn-inscricao{
 		right: 55px;
 	}
+	.formulario-relatorio{
+		width: 100%;
+	}
+	.indicadores h1.relatorio{
+		font-size: 55px;
+	}
+	.indicadores .img-relatorio .float-right {
+    	margin-top: 110px;
+	}
 }
 @media screen and (max-width: 823px){
 	#vemmorar{
 		overflow: scroll;
+	}
+	.indicadores .img-relatorio .float-right{
+		margin-top: 10px;
+		padding-bottom: 20px;
 	}
 }
 @media screen and (max-width: 768px){
@@ -3589,6 +3701,19 @@ a.deslogar{
 	}
 	.event .evento img {
     	vertical-align: middle;
+	}
+	.page-template-page-relatorio-analitico .indicadores .img-relatorio .float-right, 
+	.page-template-page-relatorio-analitico-s2 .indicadores .img-relatorio .float-right{
+		margin-top: 10px;
+	}
+	a.secao, a:hover.secao{
+		margin-top: -150px;
+	}
+}
+@media screen and (max-width: 568px){
+	.indicadores h1.relatorio,
+	.indicadores h1.relatorio span{
+	    font-size: 40px;
 	}
 }
 @media screen and (max-width: 414px){
@@ -3651,7 +3776,12 @@ a.deslogar{
 	#vemmorar .vemmorar p.apoio{
 		margin-top: 35px;
 	}
-
+	a.secao, a:hover.secao{
+		margin-top: -125px;
+	}
+	.indicadores iframe{
+		height: 300px;
+	}
 }
 @media screen and (max-width: 375px){
 	.event .bg-indicadores-mobile {
@@ -3669,6 +3799,12 @@ a.deslogar{
 	}
 	#vemmorar .vemmorar p.convidamos{
 		padding-top: 175px;
+	}
+	.indicadores h1.relatorio {
+	    font-size: 35px;
+	}
+	a.secao, a:hover.secao{
+		margin-top: -120px;
 	}
 }
 @media screen and (max-width: 360px){
@@ -3715,5 +3851,13 @@ a.deslogar{
 	#vemmorar .vemmorar{
 		background: url(../img/bg-vemmorar-mobile-320.jpg) no-repeat center 0;
 		height: 620px;
+	}
+	.indicadores h1.relatorio,
+	.indicadores h1.relatorio span {
+	    font-size: 30px;
+	}
+	a.secao, a:hover.secao {
+    	margin-top: -110px;
+	    font-size: 15px;
 	}
 }
