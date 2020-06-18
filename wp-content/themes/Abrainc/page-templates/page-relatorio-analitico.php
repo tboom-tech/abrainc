@@ -44,7 +44,7 @@ get_template_part('common');
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<iframe name="Relatório Analítico Minha Casa Minha Vida" src="https://app.powerbi.com/view?r=eyJrIjoiNWY0Mjg4ODMtNmNkYi00ODVkLWIyZjItYWVmOGYzZDM1YWQxIiwidCI6Ijc1YzQ2ZWJhLTFhMzAtNDcxZS04YmQ2LTExZDc4MWU1NWFkMyJ9" width="100%" height="600" frameborder=0 scrolling="auto">
+					<iframe name="Relatório Analítico Minha Casa Minha Vida" src="https://app.powerbi.com/view?r=eyJrIjoiNmUzNDMyNzctYmJkNi00NzVmLWJjMmUtNWUzOGRmNjk5YmJmIiwidCI6Ijc1YzQ2ZWJhLTFhMzAtNDcxZS04YmQ2LTExZDc4MWU1NWFkMyJ9" width="100%" height="600" frameborder=0 scrolling="auto">
 					</iframe>
 				</div>
 			</div>
