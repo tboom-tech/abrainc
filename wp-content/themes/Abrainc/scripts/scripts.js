@@ -128,7 +128,7 @@ function EnviaCadastro(local) {
                 $('#form_'+local+' input').val('');
                 $('#form_'+local+' input').removeClass('valide-form');
 
-                window.location.href = "/indicadores-publicacoes/";
+                /*window.location.href = "/indicadores-publicacoes/";*/
               }
           });
       } 

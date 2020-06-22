@@ -26,9 +26,11 @@ get_template_part('common');
 			<div class="row">
 				<div class="col-md-8">
 					<h1 class="relatorio">
-						Relatório Power B.I. <br />
-						<span>Seção 1</span>
+						Relatórios Minha Casa Minha Vida (MCMV)
 					</h1>
+					<h4 class="relatorio"><a href="/relatorio-analitico-minha-casa-minha-vida/"><span>Seção 1</span>: Relatório Analítico MCMV 2019-2020</a></h4>
+					<h4 class="relatorio"><a href="/relatorio-analitico-minha-casa-minha-vida-secao-2/"><span>Seção 2</span>: Acompanhamento orçamentário FGTS 2020</a></h4>
+					<h4 class="relatorio"><a href="/relatorio-analitico-minha-casa-minha-vida-secao-3/"><span>Seção 3</span>: Resultados Contábeis e Sustentabilidade do FGTS</a></h4>
 				</div>
 				<div class="col-md-4 img-relatorio">
 					<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-relatorio.png">
@@ -36,7 +38,7 @@ get_template_part('common');
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<a class="secao" href="/relatorio-analitico-minha-casa-minha-vida-secao-2/">Ir para a Seção 2</a>
+					<a class="deslogar" href="?deslogar">sair</a>
 				</div>
 			</div>
 		</div>	
@@ -44,7 +46,7 @@ get_template_part('common');
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<iframe name="Relatório Analítico Minha Casa Minha Vida" src="https://app.powerbi.com/view?r=eyJrIjoiNmUzNDMyNzctYmJkNi00NzVmLWJjMmUtNWUzOGRmNjk5YmJmIiwidCI6Ijc1YzQ2ZWJhLTFhMzAtNDcxZS04YmQ2LTExZDc4MWU1NWFkMyJ9" width="100%" height="600" frameborder=0 scrolling="auto">
+					<iframe name="Relatório Analítico Minha Casa Minha Vida" src="https://app.powerbi.com/view?r=eyJrIjoiOGM2ZTNkOGYtNTNiMC00OTEyLWI1MmYtMWY2MmUxYTliMjUwIiwidCI6Ijc1YzQ2ZWJhLTFhMzAtNDcxZS04YmQ2LTExZDc4MWU1NWFkMyJ9" width="100%" height="600" frameborder=0 scrolling="auto">
 					</iframe>
 				</div>
 			</div>
