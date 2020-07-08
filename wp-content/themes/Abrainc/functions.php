@@ -372,6 +372,38 @@ function create_post_type() {
         )
     );
 
+    register_post_type('mapa',
+        array(
+          'labels' => array(
+              'name' => 'Mapa',
+              'singular_name' => 'Mapa',
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'menu_position' => 11,
+          'menu_icon' => 'dashicons-flag',
+          'supports'  => array( 'title', 'editor' ),
+          'rewrite' => array('slug' => 'mapa')
+        )
+    );
+
+    register_taxonomy(
+      'categorias',
+      'mapa',
+      array(
+        'labels' => array(
+          'name'                       => "Categorias",
+          'singular_name'              => "Categoria",
+          'all_items'                  => "Todas as Categorias",
+          'edit_item'                  => "Editar categoria",
+          'update_item'                => "Atualizar categoria",
+          'add_new_item'               => "Adicionar categoria",
+          ),
+          'show_admin_column'     => true,
+          'hierarchical'          => true
+        )
+    );  
+
     flush_rewrite_rules();
 }    
 

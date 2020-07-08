@@ -88,6 +88,8 @@
 	<meta name="theme-color" content="#ffffff">
 	<link href="<?=ABRAINC_TEMA?>/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon">
 	<link href="<?=ABRAINC_TEMA?>/favicon.ico?v=2" rel="icon" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
 
 	<!-- Latest compiled and minified CSS -->

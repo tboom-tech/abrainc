@@ -1978,13 +1978,15 @@ span.wpcf7-not-valid-tip{
 
 #gestao .title,
 #identidade .title,
-#conquista .title{
+#conquista .title,
+#mapa .title{
 	border-top: 1px solid #ebebeb;
 }
 
 #gestao .title h4,
 #identidade .title h4,
-#conquista .title h4{
+#conquista .title h4,
+#mapa .title h4{
 	color: #383b3e;
     font-family: "Mermaid Bold";
     font-size: 36px;
@@ -1995,7 +1997,53 @@ span.wpcf7-not-valid-tip{
     margin: 0px 0px 0px -15px;
     text-transform: uppercase;	
 }
-
+#mapa iframe{
+	margin-top: 40px;
+}
+#mapa .linha {
+	border-bottom: 1px solid #383b3e;
+}
+#mapa .linha img {
+	padding: 10px 0 20px;
+	max-width: 100%;
+}
+#mapa .mapa img {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+#mapa h3{
+	color: #383b3e;
+    font-family: "Mermaid Bold";
+    font-size: 23px;
+}
+#mapa h3 i {
+	font-size: 25px;
+}
+#mapa h3.sp i{
+	color: #ff0000;
+}
+#mapa h3.mg i{
+	color: #ff6c00;
+}
+#mapa h3.es i{
+	color: #ffe400;
+}
+#mapa h3.pr i{
+	color: #3fbf00;
+}
+#mapa h3.go i{
+	color: #1ad1ff;
+}
+#mapa h3.se i{
+	color: #1a35ff;
+}
+#mapa h3.pe i{
+	color: #801aff;
+}
+#mapa h3.ma i{
+	color: #ff1a8b;
+}
 #conquista .item-conquista{
 	text-align: center;
 	margin: 0 20px;
@@ -3257,11 +3305,6 @@ a:hover.secao{
 	color: #000;
 }
 .indicadores .img-relatorio .float-right{
-	margin-top: 130px;
-}
-.page-template-page-relatorio-analitico .indicadores .img-relatorio .float-right,
-.page-template-page-relatorio-analitico-s2 .indicadores .img-relatorio .float-right,
-.page-template-page-relatorio-analitico-s3 .indicadores .img-relatorio .float-right{
 	margin-top: 60px;
 }
 .indicadores .baixar{
@@ -3415,7 +3458,8 @@ a:hover.secao{
 
 	#gestao .title h4, 
 	#identidade .title h4, 
-	#conquista .title h4{
+	#conquista .title h4,
+	#mapa .title h4{
 		padding: 10px 20px 20px 10px;
 	}
 
@@ -3652,6 +3696,11 @@ a:hover.secao{
 	.indicadores .img-relatorio .float-right {
     	margin-top: 110px;
 	}
+	#mapa .linha img,
+	#mapa .mapa img {
+		max-width: 100%;
+	}
+
 }
 @media screen and (max-width: 823px){
 	#vemmorar{
@@ -3796,6 +3845,12 @@ a:hover.secao{
 	}
 	.indicadores iframe{
 		height: 300px;
+	}
+	.flickity-prev-next-button.next{
+		right: 10px !important;
+	}
+	.flickity-prev-next-button.previous{
+		left: 10px !important;	
 	}
 }
 @media screen and (max-width: 375px){

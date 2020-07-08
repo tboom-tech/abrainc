@@ -93,6 +93,245 @@ get_template_part('common');
 		       </div>
 			</div>
 		</div>
+	</section>
+
+	<section id="mapa">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 title">
+					<h4>Mapa da Associadas</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 mapa">
+					<img src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/mapa_associados.png">
+				</div>	
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 linha">
+					<h3 class="sp"><i class="fas fa-map-marker-alt"></i> São Paulo</h3>
+
+					<?php 
+						$loop = new WP_Query(array('post_type' => 'mapa',
+									'orderby' => 'title',
+									'order'	 => 'ASC',
+									'posts_per_page' => 50,
+									'tax_query' => array(
+							            array(
+							                'taxonomy'  => 'categorias',
+							                'terms'     => 'saopaulo',
+							                'field'     => 'slug',
+							                'compare'   => 'LIKE'    
+										)
+							        ),
+						));
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="col-md-2 col-xs-6">
+							
+							<img src="<?php the_field('logo_associada'); ?>">
+							
+						</div>
+					<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 linha">
+					<h3 class="mg"><i class="fas fa-map-marker-alt"></i> Minas Gerais</h3>
+
+					<?php 
+						$loop = new WP_Query(array('post_type' => 'mapa',
+									'orderby' => 'title',
+									'order'	 => 'ASC',
+									'posts_per_page' => 50,
+									'tax_query' => array(
+							            array(
+							                'taxonomy'  => 'categorias',
+							                'terms'     => 'minasgerais',
+							                'field'     => 'slug',
+							                'compare'   => 'LIKE'    
+										)
+							        ),
+						));
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="col-md-2">
+							
+							<img src="<?php the_field('logo_associada'); ?>">
+							
+						</div>
+					<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 linha">
+					<h3 class="es"><i class="fas fa-map-marker-alt"></i> Espírito Santo</h3>
+
+					<?php 
+						$loop = new WP_Query(array('post_type' => 'mapa',
+									'orderby' => 'title',
+									'order'	 => 'ASC',
+									'posts_per_page' => 50,
+									'tax_query' => array(
+							            array(
+							                'taxonomy'  => 'categorias',
+							                'terms'     => 'espiritosanto',
+							                'field'     => 'slug',
+							                'compare'   => 'LIKE'    
+										)
+							        ),
+						));
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="col-md-2">
+							
+							<img src="<?php the_field('logo_associada'); ?>">
+							
+						</div>
+					<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 linha">
+					<h3 class="pr"><i class="fas fa-map-marker-alt"></i> Paraná</h3>
+
+					<?php 
+						$loop = new WP_Query(array('post_type' => 'mapa',
+									'orderby' => 'title',
+									'order'	 => 'ASC',
+									'posts_per_page' => 50,
+									'tax_query' => array(
+							            array(
+							                'taxonomy'  => 'categorias',
+							                'terms'     => 'parana',
+							                'field'     => 'slug',
+							                'compare'   => 'LIKE'    
+										)
+							        ),
+						));
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="col-md-2">
+							
+							<img src="<?php the_field('logo_associada'); ?>">
+							
+						</div>
+					<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 linha">
+					<h3 class="go"><i class="fas fa-map-marker-alt"></i> Goiás</h3>
+
+					<?php 
+						$loop = new WP_Query(array('post_type' => 'mapa',
+									'orderby' => 'title',
+									'order'	 => 'ASC',
+									'posts_per_page' => 50,
+									'tax_query' => array(
+							            array(
+							                'taxonomy'  => 'categorias',
+							                'terms'     => 'goias',
+							                'field'     => 'slug',
+							                'compare'   => 'LIKE'    
+										)
+							        ),
+						));
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="col-md-2">
+							
+							<img src="<?php the_field('logo_associada'); ?>">
+							
+						</div>
+					<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 linha">
+					<h3 class="se"><i class="fas fa-map-marker-alt"></i> Sergipe</h3>
+
+					<?php 
+						$loop = new WP_Query(array('post_type' => 'mapa',
+									'orderby' => 'title',
+									'order'	 => 'ASC',
+									'posts_per_page' => 50,
+									'tax_query' => array(
+							            array(
+							                'taxonomy'  => 'categorias',
+							                'terms'     => 'sergipe',
+							                'field'     => 'slug',
+							                'compare'   => 'LIKE'    
+										)
+							        ),
+						));
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="col-md-2">
+							
+							<img src="<?php the_field('logo_associada'); ?>">
+							
+						</div>
+					<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 linha">
+					<h3 class="pe"><i class="fas fa-map-marker-alt"></i> Pernambuco</h3>
+
+					<?php 
+						$loop = new WP_Query(array('post_type' => 'mapa',
+									'orderby' => 'title',
+									'order'	 => 'ASC',
+									'posts_per_page' => 50,
+									'tax_query' => array(
+							            array(
+							                'taxonomy'  => 'categorias',
+							                'terms'     => 'pernambuco',
+							                'field'     => 'slug',
+							                'compare'   => 'LIKE'    
+										)
+							        ),
+						));
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="col-md-2">
+							
+							<img src="<?php the_field('logo_associada'); ?>">
+							
+						</div>
+					<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="ma"><i class="fas fa-map-marker-alt"></i> Maranhão</h3>
+
+					<?php 
+						$loop = new WP_Query(array('post_type' => 'mapa',
+									'orderby' => 'title',
+									'order'	 => 'ASC',
+									'posts_per_page' => 50,
+									'tax_query' => array(
+							            array(
+							                'taxonomy'  => 'categorias',
+							                'terms'     => 'maranhao',
+							                'field'     => 'slug',
+							                'compare'   => 'LIKE'    
+										)
+							        ),
+						));
+						while ($loop->have_posts()) : $loop->the_post();
+					?>
+						<div class="col-md-2">
+							
+							<img src="<?php the_field('logo_associada'); ?>">
+							
+						</div>
+					<?php endwhile; wp_reset_postdata(); ?>	
+				</div>
+			</div>
+		</div>
 	</section>	
 
 	<!-- <section id="identidade">
