@@ -30,7 +30,6 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'montserratbold';
     src: url('../fonts/montserrat-bold-webfont.eot');
@@ -42,7 +41,6 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'montserratlight';
     src: url('../fonts/montserrat-light-webfont.eot');
@@ -54,7 +52,6 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'montserratregular';
     src: url('../fonts/montserrat-regular-webfont.eot');
@@ -65,9 +62,7 @@ body {
          url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-
 @font-face {
     font-family: 'museo300';
     src: url('../fonts/museo300-regular-webfont.eot');
@@ -80,10 +75,6 @@ body {
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
     font-family: 'museo700';
     src: url('../fonts/museo700-regular-webfont.eot');
@@ -94,12 +85,7 @@ body {
          url('../fonts/museo700-regular-webfont.svg#museo700') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
-
 @font-face {
     font-family: 'museo900';
     src: url('../fonts/museo900-regular-webfont.eot');
@@ -110,7 +96,98 @@ body {
          url('../fonts/museo900-regular-webfont.svg#museo900') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'bebas_kairegular';
+    src: url('../fonts/bebaskai-webfont.eot');
+    src: url('../fonts/bebaskai-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebaskai-webfont.woff2') format('woff2'),
+         url('../fonts/bebaskai-webfont.woff') format('woff'),
+         url('../fonts/bebaskai-webfont.ttf') format('truetype'),
+         url('../fonts/bebaskai-webfont.svg#bebas_kairegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'bebas_neuebold';
+    src: url('../fonts/bebasneue_bold-webfont.eot');
+    src: url('../fonts/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_bold-webfont.woff') format('woff'),
+         url('../fonts/bebasneue_bold-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'bebas_neuebook';
+    src: url('../fonts/bebasneue_book-webfont.eot');
+    src: url('../fonts/bebasneue_book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue_book-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_book-webfont.woff') format('woff'),
+         url('../fonts/bebasneue_book-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue_book-webfont.svg#bebas_neuebook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bebas_neuelight';
+    src: url('../fonts/bebasneue_light-webfont.eot');
+    src: url('../fonts/bebasneue_light-webfont.eot?#iefix') format('em../fonts/bedded-opentype'),
+         url('../fonts/bebasneue_light-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_light-webfont.woff') format('woff'),
+         url('../fonts/bebasneue_light-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue_light-webfont.svg#bebas_neuelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gothamultra';
+    src: url('../fonts/gotham-ultra-webfont.eot');
+    src: url('../fonts/gotham-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-ultra-webfont.woff2') format('woff2'),
+         url('../fonts/gotham-ultra-webfont.woff') format('woff'),
+         url('../fonts/gotham-ultra-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-ultra-webfont.svg#gothamultra') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_mediumregular';
+    src: url('../fonts/gotham-medium-webfont.eot');
+    src: url('../fonts/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-medium-webfont.woff2') format('woff2'),
+         url('../fonts/gotham-medium-webfont.woff') format('woff'),
+         url('../fonts/gotham-medium-webfont.svg#gotham_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothambook';
+    src: url('../fonts/gotham-book-webfont.eot');
+    src: url('../fonts/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-book-webfont.woff2') format('woff2'),
+         url('../fonts/gotham-book-webfont.woff') format('woff'),
+         url('../fonts/gotham-book-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-book-webfont.svg#gothambook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothambold';
+    src: url('../fonts/gotham-bold-webfont.eot');
+    src: url('../fonts/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-bold-webfont.woff2') format('woff2'),
+         url('../fonts/gotham-bold-webfont.woff') format('woff'),
+         url('../fonts/gotham-bold-webfont.svg#gothambold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 b, strong {
@@ -1047,9 +1124,10 @@ span.wpcf7-not-valid-tip{
 .associadas h1,
 .associadas h2{
 	color: #383b3e;
-	font-size: 79px;
+	font-size: 60px;
 	font-family: 'Mermaid-Bold';
 	font-weight: bold;
+	margin-top: 40px;
 }
 
 .associadas .content-associadas{
@@ -1070,7 +1148,7 @@ span.wpcf7-not-valid-tip{
 
 .associadas h2 img{
     float: right;
-    margin-top: 70px;
+    margin-top: 35px;
 }
 
 .associadas .item{
@@ -1218,14 +1296,14 @@ span.wpcf7-not-valid-tip{
 
 .publicacoes h1{
 	color: #383b3e;
-	font-size: 110px;
+	font-size: 60px;
 	font-family: 'Mermaid-Bold';
 	font-weight: bold;
 }
 
 .artigos h1{
     color: #383b3e;
-    font-size: 110px;
+    font-size: 60px;
     font-family: 'Mermaid-Bold';
     font-weight: bold;
     border-bottom: 2px solid;
@@ -1245,7 +1323,7 @@ span.wpcf7-not-valid-tip{
 .publicacoes h1 img,
 .artigos h1 img{
     float: right;
-    margin-top: 70px;
+    margin-top: 35px;
 }
 
 .publicacoes .menu-publicacoes{
@@ -1557,7 +1635,7 @@ span.wpcf7-not-valid-tip{
 
 .videos h1 {
     color: #383b3e;
-    font-size: 70px;
+    font-size: 60px;
     font-family: 'Mermaid-Bold';
     font-weight: bold;
     border-bottom: 2px solid;
@@ -3321,22 +3399,344 @@ a:hover.secao{
     text-align: center;
     margin-top: 70px;
 }
+.associadas .mapa img{
+	width: 38%;
+	display: block;
+	margin: 0 auto;
+}
+.mapa_mobile{
+	display: none !important;
+}
+.modal_mapa{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999999;
+	display: none;
+}
+.modal_mapa .modal_estado{
+	width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	margin-top: 50px;
+	background-color: #FFF;
+    box-shadow: 5px 5px 15px 0px;
+}
+.modal_mapa .modal_estado h2{
+	color: #383b3e;
+    font-family: "Mermaid Bold";
+    font-size: 23px;
+}
+.modal_mapa .modal_estado p{
+	color: #383b3e;
+    font-family: "Mermaid Bold";
+    font-size: 20px;
+}
+.modal_mapa .modal_estado .fechando {
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.modal_mapa .modal_estado .empresas div{
+	display: inline-block;
+	width: 49.5%;
+	margin: 0 auto;
+	vertical-align: top;
+}
+.modal_mapa .modal_estado .empresas ul {
+	padding-left: 0;
+}
+.modal_mapa .modal_estado .empresas ul li {
+	color: #383b3e;
+    font-family: "Mermaid Bold";
+    font-size: 20px;
+    list-style: none;
+}
+.pin{
+	cursor: pointer;
+}
+.modal_mapa .parana h2{
+	color: #3fbf00;
+}
+.modal_mapa .saopaulo h2{
+	color: #ff0000;
+}
+.modal_mapa .minasgerais h2{
+	color: #ff6c00;
+}
+.modal_mapa .espiritosanto h2{
+	color: #ffe400;
+}
+.modal_mapa .goias h2{
+	color: #1ad1ff;
+}
+.modal_mapa .sergipe h2{
+	color: #1a35ff;
+}
+.modal_mapa .pernambuco h2{
+	color: #801aff;
+}
+.modal_mapa .maranhao h2{
+	color: #ff1a8b;
+}
+
+/* Webinar */
+.webinar {
+	padding-top: 50px;
+	background-color: #364789;
+}
+.webinar h2{
+	font-family: 'bebas_kairegular';
+	font-size: 46px;
+	color: #FFF;
+}
+.webinar h3{
+	font-family: 'bebas_kairegular';
+	color: #44a2cf;
+	font-size: 46px;
+	margin: 30px 0;
+}
+.webinar p.futuro{
+	font-family: 'bebas_neuebold';
+	font-size: 65px;
+	color: #FFF;
+	line-height: 65px;
+}
+.webinar p.dia{
+	font-family: 'bebas_kairegular';
+	font-size: 46px;
+	color: #44a2cf;
+	margin: 30px 0;
+}
+.webinar .palestrantes p.title{
+	font-family: 'bebas_kairegular';
+	font-size: 32px;
+	color: #FFF;
+	margin-top: 10px;
+}
+.webinar .palestrantes p{
+	font-family: 'bebas_neuebook';
+	font-size: 32px;
+	color: #FFF;
+	margin: 0;
+	line-height: 32px;
+}
+.webinar .bg-webinar{
+	background: url(../img/bg-webinar.png) no-repeat center 75px;
+	height: 470px;
+}
+.webinar .bg-webinar p.aguarde{
+	font-family: 'bebas_kairegular';
+	font-size: 29px;
+	color: #FFF;
+	margin-top: 50px;
+	line-height: 33px;
+}
+.webinar .form-webinar{
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 25px 40px;
+}
+.webinar .form-webinar p{
+	font-family: 'times';
+	font-weight: bold;
+	font-size: 34px;
+	color: #383b3e;
+	line-height: 34px;
+}
+.webinar .form-webinar input{
+	width: 100%;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	color: #383b3e;
+	padding-left: 10px;
+	border-radius: 5px;
+	border: 1px solid #dadada;
+}
+.webinar .form-webinar input::placeholder{
+	font-family: 'Open Sans';
+	font-size: 16px;
+	color: #383b3e;
+}
+.webinar .form-webinar input[type=submit]{
+	background-color: #3b6ec5;
+	width: 70%;
+	float: right;
+	text-transform: uppercase;
+	color: #FFF;
+	border-radius: 5px;
+	border: none;
+}
+.brain{
+    background: url(../img/bg-webinar-brain.jpg) no-repeat center 0;
+    height: auto;
+    background-size: contain; 
+    padding-bottom: 30px;
+}
+.brain .webinar {
+    background: transparent;
+    padding-top: 80px;
+}
+.brain .webinar-brain{
+    padding-top: 80px;
+    text-align: right;
+}
+.brain .webinar-brain p{
+    font-family: 'gothambold';
+    font-size: 44px;
+    color: #FFF;
+}
+.brain .webinar-brain h2{
+    font-family: 'gotham_mediumregular';
+    font-size: 90px;
+    color: #313b63;
+    text-transform: uppercase;
+}
+.brain .webinar-brain h3{
+    font-family: 'gothamultra';
+    font-size: 50px;
+    color: #313b63;
+}
+.brain .webinar-brain h3 span{
+    color: #FFF;
+    background: #313b63;
+    padding: 0px 7px;
+    border-radius: 50px;
+    font-size: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    text-transform: unset;
+    font-family: 'gothambold';
+    display: inline-block;
+    height: 30px;
+    margin-top: -7px;
+}
+.brain .webinar .form-webinar{
+    border: 1px solid #dadada;
+}
+.brain .comportamento p{
+    font-size: 28px;
+    color: #4d505b;
+    line-height: 28px;
+    font-family: 'gothambook';
+}
+.brain .comportamento p span{
+    font-family: 'gothamultra';
+}
+.programacao{
+    background: #282662;
+    padding: 40px 0;
+    margin: 0;
+}
+.programacao .principal{
+    margin-bottom: 30px;
+}
+.programacao h3{
+    font-family: 'bebas_kairegular';
+    font-size: 38px;
+    color: #FFF;
+}
+.programacao h4,
+.participantes h4{
+    font-family: 'gotham_mediumregular';
+    color: #fdb822;
+    font-size: 28px;
+    margin: 0;
+}
+.programacao p.sub,
+.participantes p.sub{
+    font-family: 'bebas_neuebook';
+    color: #FFF;
+    font-size: 30px;
+}
+.programacao p,
+.participantes p{
+    font-family: 'gothambook';
+    color: #FFF;
+    font-size: 21px;
+}
+.programacao p span,
+.participantes p span{
+    font-family: 'montserratbold';
+}
+.programacao span{
+    font-family: 'gothambold';
+    font-size: 17px;
+    color: #FFF;
+}
+.programacao p.title{
+    font-family: 'gothambook';
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.programacao p.interior{
+    font-family: 'gothamultra';
+    font-size: 37px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.participantes{
+    background: url(../img/bg-webinar-participantes.jpg) no-repeat center 0;
+    background-size: cover;
+    padding: 40px 0;
+}
+.participantes .itens{
+    padding: 20px 0;
+}
+.final .logos img{
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0;
+}
 @media screen and (min-width: 1601px) and (max-width: 2048px){
 	.event .bg-indicadores {
     	padding: 230px 0;
     	background-position-x: 0px;
 	}
+    .brain{
+        height: 760px;
+    }
+    .comportamento{
+        margin-top: 160px;
+    }
+    .brain .webinar-brain,
+    .brain .webinar{
+        padding-top: 180px;
+    }
+
 }
 @media screen and (min-width: 1441px) and (max-width: 1600px){
 	.event .bg-indicadores {
 	    background-position-x: -230px;
 	}
+    .brain{
+        height: 660px;
+    }
+    .comportamento{
+        margin-top: 80px;
+    }
+    .brain .webinar-brain,
+    .brain .webinar{
+        padding-top: 180px;
+    }
 }
 @media screen and (min-width: 1380px) and (max-width: 1440px){
 	.event .bg-indicadores {
 	    background-position-x: -232px;
 	    padding: 232px 0 149px;
 	}
+    .brain{
+        height: 560px;
+    }
+    .comportamento{
+        margin-top: 50px;
+    }
+    .brain .webinar-brain,
+    .brain .webinar{
+        padding-top: 125px;
+    }
 }
 @media (max-width: 1024px) {
 	.mobile{
@@ -3344,6 +3744,13 @@ a:hover.secao{
 	}
 	.desktop{
 		display: none;
+	}
+	#mapa .mapa img.mapa_desk{
+		display: none;
+	}
+	#mapa .mapa img.mapa_mobile{
+		display: block !important;
+		width: 100%;
 	}
 	header .logo-mobile{
 		text-align: center;
@@ -3491,7 +3898,7 @@ a:hover.secao{
 	.publicacoes h1 img,
 	.associadas h2 img {
 	    float: none;
-	    margin-top: -45px;
+	    margin-top: 0px;
 	    max-width: 100%;
 	}	
 
@@ -3700,7 +4107,16 @@ a:hover.secao{
 	#mapa .mapa img {
 		max-width: 100%;
 	}
-
+    .brain .webinar-brain h2{
+        font-size: 60px;
+    }
+    .brain .webinar-brain h3,
+    .brain .webinar-brain p{
+        font-size: 35px;
+    }
+    .comportamento {
+        margin-top: 60px;
+    }
 }
 @media screen and (max-width: 823px){
 	#vemmorar{
@@ -3710,6 +4126,30 @@ a:hover.secao{
 		margin-top: 10px;
 		padding-bottom: 20px;
 	}
+	.webinar .form-webinar{
+		margin-top: 40px;
+	}
+	.webinar .palestrantes div{
+		margin: 20px 0;
+	}
+    .brain {
+        background-size: cover;
+        background-position-x: -300px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .brain .webinar-brain{
+        text-align: center;
+    }
+    .brain .comportamento p{
+        color: #FFF;
+    }
+    .programacao .col-md-12,
+    .programacao .col-md-6,
+    .participantes .col-md-6,
+    .participantes .col-md-6{
+        text-align: center;
+    }
 }
 @media screen and (max-width: 768px){
 	.event .palestrantes .curriculo{
@@ -3779,6 +4219,14 @@ a:hover.secao{
 	.indicadores h1.relatorio span{
 	    font-size: 35px;
 	}
+}
+@media screen and (max-width: 450px){
+    .brain{
+        background-position-x: -547px;
+    }
+    .brain .webinar-brain p{
+        color: #313b63;
+    }
 }
 @media screen and (max-width: 414px){
 	.event .evento p{
@@ -3852,6 +4300,13 @@ a:hover.secao{
 	.flickity-prev-next-button.previous{
 		left: 10px !important;	
 	}
+	.associadas h1, 
+	.artigos h1, 
+	.publicacoes h1, 
+	.associadas h2{
+		font-size: 55px;
+		text-align: left;
+	}
 }
 @media screen and (max-width: 375px){
 	.event .bg-indicadores-mobile {
@@ -3903,6 +4358,12 @@ a:hover.secao{
 	.indicadores h1.relatorio {
     	font-size: 30px;
 	}
+	.associadas h1, 
+	.artigos h1, 
+	.publicacoes h1, 
+	.associadas h2{
+		font-size: 50px
+	}
 }
 @media screen and (max-width: 320px){
 	.event .programacao p.abertura, 
@@ -3944,5 +4405,11 @@ a:hover.secao{
 	.indicadores h4.relatorio span{
 		font-weight: inherit;
 		font-size: 12px;
+	}
+	.associadas h1, 
+	.artigos h1, 
+	.publicacoes h1, 
+	.associadas h2{
+		font-size: 45px
 	}
 }
