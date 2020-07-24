@@ -12,7 +12,7 @@ get_template_part('common');
 				<div class="row">
 					<div class="col-md-12">
 						<h1>
-							Quem Somos
+							Quem Somos&nbsp;&nbsp;&nbsp;&nbsp;
 							<img class="float-right" src="<?=ABRAINC_URL?>/wp-content/themes/Abrainc/img/bg-title-page-white.png">
 						</h1>
 					</div>
@@ -95,7 +95,7 @@ get_template_part('common');
 		</div>
 	</section>
 
-	<section id="mapa">
+	<!-- <section id="mapa">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 title">
@@ -332,7 +332,7 @@ get_template_part('common');
 				</div>
 			</div>
 		</div>
-	</section>	
+	</section>	 -->
 
 	<!-- <section id="identidade">
 		<div class="container">

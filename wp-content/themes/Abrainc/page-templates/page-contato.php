@@ -108,4 +108,17 @@ get_template_part('common');
 	</section>
 <?php
 
-get_footer();
+get_footer(); ?>
+
+<script>
+	document.addEventListener('wpcf7mailsent', function(event) {
+	 	window.dataLayer.push({
+			 'event': 'gaTriggerEvent',
+			 'gaEventCategory': 'conversao',
+			 'gaEventAction': 'contato',
+			 'gaEventLabel': 'email',
+			 'formId' : event.detail.contactFormId,
+			 'response' : event.detail.inputs
+	 	})
+	}); 
+</script>

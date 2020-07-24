@@ -23,10 +23,49 @@ $('.fechar').click(function(){
   $('#vemmorar').fadeOut('');
 })
 
-$(document).ready(function() {    
-    $('#telefone_cadastro').mask('(00) 0000-00000');
+$(document).ready(function(){
+  var SPMaskBehavior = function (val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  },
+  spOptions = {
+    onKeyPress: function(val, e, field, options) {
+        field.mask(SPMaskBehavior.apply({}, arguments), options);
+      }
+  };
+
+   $('.telefones').mask(SPMaskBehavior, spOptions);
+   $('#telefone_cadastro').mask(SPMaskBehavior, spOptions);
 });
 
+
+$('#parana_mapa').click(function(){
+  $('#parana').fadeIn('');
+})
+$('#saopaulo_mapa').click(function(){
+  $('#saopaulo').fadeIn('');
+})
+$('#minasgerais_mapa').click(function(){
+  $('#minasgerais').fadeIn('');
+})
+$('#espiritosanto_mapa').click(function(){
+  $('#espiritosanto').fadeIn('');
+})
+$('#goias_mapa').click(function(){
+  $('#goias').fadeIn('');
+})
+$('#sergipe_mapa').click(function(){
+  $('#sergipe').fadeIn('');
+})
+$('#pernambuco_mapa').click(function(){
+  $('#pernambuco').fadeIn('');
+})
+$('#maranhao_mapa').click(function(){
+  $('#maranhao').fadeIn('');
+})
+
+$('.fechando').click(function(){
+  $('.modal_mapa').fadeOut('');
+})
 
 
 //Função para checar se campo e-mail está correto
